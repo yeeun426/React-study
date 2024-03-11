@@ -586,6 +586,102 @@ export default function page() {
           </div>
         </div>
       </div>
+      <div class="current-trends-wrap">
+        <p class="banner-title">
+          Current Trends <span>See More...</span>
+        </p>
+        <div class="promotion-wrap">
+          <div class="trend-item">
+            <img src="https://devllink.kr/data/custom_banner/custom_banner_90_1.png?ch=1696474306" />
+            <div>promotion</div>
+            <div class="trend-info">가을에 놓치면 섭섭한 청청패션</div>
+            <a class="see-more">See More...</a>
+          </div>
+          <div class="trend-item">
+            <img src="https://devllink.kr/data/custom_banner/custom_banner_90_1.png?ch=1696474306" />
+            <div>promotion</div>
+            <div class="trend-info">가을에 놓치면 섭섭한 청청패션</div>
+            <a>See More...</a>
+          </div>
+          <div class="trend-item">
+            <img src="https://devllink.kr/data/custom_banner/custom_banner_90_1.png?ch=1696474306" />
+            <div>promotion</div>
+            <div class="trend-info">가을에 놓치면 섭섭한 청청패션</div>
+            <a>See More...</a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="designDisplay designLastestNew65eb0adfb1aa2"
+        designElement="displaylastest"
+        id="designLastestNew65eb0adfb1aa2"
+        templatePath="bWFpbi9jYWNoZS5odG1s"
+      >
+        <div>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td valign="bottom" align="left" height="25">
+                <span class="tit">
+                  <p>Review</p>
+                </span>
+              </td>
+              <td valign="bottom" align="right">
+                <b>
+                  <a href="/board/?id=goods_review">
+                    <img src="/data/skin/llink_renewal_2023/images/design/cscenter_btn_more.gif" />
+                  </a>
+                </b>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <br style="line-height:10px;" />
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr></tr>
+          <tr class="normal_bbslist">
+            <td width="5%" valign="top" class="sbj">
+              <table
+                width="100%"
+                align="left"
+                cellpadding="0"
+                cellspacing="0"
+                border="0"
+              >
+                <tr>
+                  <td align="left" width="80" height="80">
+                    ? d.filelist
+                    <span class="BoardgoodsDisplayImageWrap" decoration="e30=">
+                      <a href="{.wigetboardurl_view}">
+                        <img
+                          src="{.filelist}"
+                          width="80"
+                          height="80"
+                          onerror="this.src='/data/skin/{skin}/images/common/noimage.gif'"
+                        />
+                      </a>
+                    </span>
+                    냠
+                  </td>
+                </tr>
+                <tr>
+                  <td height="6"></td>
+                </tr>
+                <tr>
+                  <td align="left">
+                    <br />
+                    nk
+                    <br />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="normal_bbslist"></tr>
+          <tr>
+            <td height="30"></td>
+          </tr>
+        </table>
+      </div>
     </div>
   );
 }

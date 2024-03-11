@@ -44,3 +44,20 @@ body {
 .category-more-wrap ul li:hover img {
   transform: scale(1.1);
 }
+
+/* current trends */
+.promotion-wrap {
+  display: flex;
+}
+
+.trend-item {
+  padding-right: 10px; /* 오른쪽에 선을 위한 여백 */
+  border-right: 1px solid #000; /* 선 스타일 및 색상 지정 */
+}
+
+/* 마지막 아이템의 오른쪽 여백과 선 제거 */
+.trend-item:last-child {
+  margin-right: 0;
+  padding-right: 0;
+  border-right: none;
+}
