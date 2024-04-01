@@ -1,0 +1,71 @@
+<!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
+@@ 카테고리 네비게이션 @@
+- 파일위치 : [스킨폴더]/_modules/category/category_gnb.html
+- 현재 3뎁스까지 노출 가능
+++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+<!--{ @ category }-->
+<li class="categoryDepth1 swiper-slide" data-category_code="{.category_code}">
+    <a class="categoryDepthLink designElement" designelement="category" href="/goods/catalog?code={.category_code}"><em>{.name}</em></a>
+    <!--{ ? .childs}-->
+    <div class="categorySub" id = {.name}>
+        <div class="categorySubKinds">
+            <a id="allCategoryLink" href="/goods/catalog?code={.category_code}" class="all-btn" style="display:none;" data-category-name="{.name}">
+                {.name} Wear
+            </a>
+            <div class = "category-view-all">View All Product</div>
+            <ul class = "categoryDepthParent">
+                <li class = "active-category">Apperal</li>
+                <li>Shoes</li>
+                <li>Bags</li>
+                <li>Accessories</li>
+            </ul>
+        </div>
+        <div class="categorySubWrap">
+            <ul class="categoryDepth2">
+                <!--{ @ .childs}-->
+                <li class="categorySubDepth" id = {..name}>
+                    <!--{ ? ..childs}-->
+                    <ul class="categoryDepth3">
+                        <!--{ @ ..childs}-->
+                        <li style = "order: {...category_code};"><a href="/goods/catalog?code={...category_code}">{...name}</a></li>
+                        <!--{ / }-->
+                    </ul>
+                    <a href="/goods/catalog?code={..category_code}">{..name} 전체보기</a>
+                    <!--{ / }-->
+                </li>
+                <!--{ / }-->
+            </ul>
+            <!--{ ? .node_banner }-->
+            <div class="categorySubBanner">
+                {.node_banner}
+            </div>
+            <!--{ / }-->
+        </div>
+        <div class = "categorySubBrand">
+            <div class = "category-brand-banner">Recent Brands</div>
+            <div class = "categorySubBrandWrapper">
+                <div class = "categorySubImg">
+                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/categoryBrand_Ralph.png" />
+                    <div class = "gnb-brand-wrapper" >
+                        <div class = "gnb-brand-name">Ralph Lauren</div>
+                        <a class = "gnb-brand-shop">Shop now</a>
+                    </div>
+                </div>
+                <div class = "categorySubImg">
+                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/categoryBrand_Stussy.png" />
+                        <div class = "gnb-brand-wrapper" >
+                        <div class = "gnb-brand-name">Stussy</div>
+                        <a class = "gnb-brand-shop">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--{ / }-->
+</li>
+
+
+<!--{ / }-->
+
