@@ -2,6 +2,9 @@
 @@ "카테고리" 리스트 페이지 @@
 - 파일위치 : [스킨폴더]/goods/catalog.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<link rel="stylesheet" href="/app/javascript/plugin/ion-rangeslider/ion.rangeSlider.min.css" />
+<script src="/app/javascript/plugin/ion-rangeslider/ion.rangeSlider.min.js"></script>
+
 <div class="newest-product-wrap">
     <div class="new-arrivals-filter product-filter">
         <div class="brand-collection-parent">
@@ -85,23 +88,8 @@
                 상세필터
             </div>
             <div class="product-view">
-                <svg class="5*5" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                    fill="none">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="black" />
-                    <rect x="3" y="3" width="2" height="14" fill="black" />
-                    <rect x="6" y="3" width="2" height="14" fill="black" />
-                    <rect x="9" y="3" width="2" height="14" fill="black" />
-                    <rect x="12.5" y="3.5" width="1" height="13" fill="black" stroke="black" />
-                    <rect x="15" y="3" width="2" height="14" fill="black" />
-                </svg>
-                <svg class="4*4" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
-                    fill="none">
-                    <rect x="0.5" y="0.5" width="19" height="19" stroke="#9A9A9A" />
-                    <rect x="3" y="3" width="2" height="14" fill="#9A9A9A" />
-                    <rect x="7" y="3" width="2" height="14" fill="#9A9A9A" />
-                    <rect x="11" y="3" width="2" height="14" fill="#9A9A9A" />
-                    <rect x="15" y="3" width="2" height="14" fill="#9A9A9A" />
-                </svg>
+                <div class="5*5"></div>
+                <div class="4*4"></div>
             </div>
         </div>
         <div class="product-detail-dropdown">
@@ -111,109 +99,235 @@
                         <span>카테고리</span>
                         <span>(0)</span>
                     </div>
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/filter_more.png" alt="+" />
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </li>
                 <li class="prd-dept1-items">
                     <div>
                         <span>브랜드</span>
                         <span>(0)</span>
                     </div>
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/filter_more.png" alt="+" />
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </li>
-                <li class="prd-dept1-items">
+                <li class="prd-dept1-items prd-price">
                     <div>
                         <span>가격</span>
                     </div>
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/filter_more.png" alt="+" />
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </li>
                 <li class="prd-dept1-items">
                     <div>
                         <span>컬러</span>
                         <span>(0)</span>
                     </div>
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/filter_more.png" alt="+" />
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
                 </li>
+                <li class="mobileView prd-filter-title">상세 필터</li>
             </ul>
             <div class="prd-dropdown-dept2">
                 <div class="prd-dept2-category">
                     <div class="prd-category-container">
                         <ul>
-                            <li>Apperal</li>
+                            <li class="active-category">Apperal</li>
                             <li>Shoes</li>
                             <li>Bag</li>
                             <li>Accesories</li>
                         </ul>
                         <div class="prd-category-wrapper">
+                            <button class="reset-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_2556_36650)">
+                                        <path
+                                            d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                            stroke="black" stroke-linecap="round" />
+                                        <path
+                                            d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2556_36650">
+                                            <rect width="13" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                초기화
+                            </button>
                             <div class="prd-category-check">
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" /> 의류 전체</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                            for="prd-check1">의류 전체</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">상의</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" /> 상의 전체</div>
-                                    <div><input type="checkbox" /> 티셔츠/폴로</div>
-                                    <div><input type="checkbox" /> 셔츠</div>
-                                    <div><input type="checkbox" /> 후드</div>
-                                    <div><input type="checkbox" /> 스웨트셔츠</div>
-                                    <div><input type="checkbox" /> 니트웨어</div>
-                                    <div><input type="checkbox" /> 가디건</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                            for="prd-check2">상의 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                            for="prd-check3">티셔츠/폴로</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                            for="prd-check4">셔츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                            for="prd-check5">후드</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check6" /><label
+                                            for="prd-check6">스웨트셔츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check7" /><label
+                                            for="prd-check7">니트웨어</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check8" /><label
+                                            for="prd-check8">가디건</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">하의</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" />하의 전체</div>
-                                    <div><input type="checkbox" />캐주얼팬츠</div>
-                                    <div><input type="checkbox" />쇼츠팬츠</div>
-                                    <div><input type="checkbox" />점프수트/오버울</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                            for="prd-check9">하의 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                            for="prd-check10">캐주얼팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check11" /><label
+                                            for="prd-check11">쇼츠팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check12" /><label
+                                            for="prd-check12">점프수트/오버울</label>
+                                    </div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">아우터</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" />아우터 전체</div>
-                                    <div><input type="checkbox" />다운/패딩</div>
-                                    <div><input type="checkbox" />코트</div>
-                                    <div><input type="checkbox" />트렌치코트</div>
-                                    <div><input type="checkbox" />블레이저</div>
-                                    <div><input type="checkbox" />베스트</div>
-                                    <div><input type="checkbox" />무스탕/퍼/시어링</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                            for="prd-check13">아우터
+                                            전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check14" /><label
+                                            for="prd-check14">다운/패딩</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check15" /><label
+                                            for="prd-check15">코트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check16" /><label
+                                            for="prd-check16">트렌치코트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check17" /><label
+                                            for="prd-check17">블레이저</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check18" /><label
+                                            for="prd-check18">베스트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check19" /><label
+                                            for="prd-check19">무스탕/퍼/시어링</label></div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">수트</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" />수트 전체</div>
-                                    <div><input type="checkbox" />수트세트</div>
-                                    <div><input type="checkbox" />수트팬츠</div>
-                                    <div><input type="checkbox" />수트 블레이저/베스트</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                            for="prd-check20">수트 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check21" /><label
+                                            for="prd-check21">수트세트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check22" /><label
+                                            for="prd-check22">수트팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check23" /><label
+                                            for="prd-check23">수트
+                                            블레이저/베스트</label></div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">스포츠웨어</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" />스포츠웨어 전체</div>
-                                    <div><input type="checkbox" />수영복</div>
-                                    <div><input type="checkbox" />스키복</div>
-                                    <div><input type="checkbox" />세트</div>
-                                    <div><input type="checkbox" />상의</div>
-                                    <div><input type="checkbox" />하의</div>
-                                    <div><input type="checkbox" />자켓</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                            for="prd-check24">스포츠웨어 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
+                                            for="prd-check25">수영복</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
+                                            for="prd-check26">스키복</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check27" /><label
+                                            for="prd-check27">세트</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check28" /><label
+                                            for="prd-check28">상의</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check29" /><label
+                                            for="prd-check29">하의</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check30" /><label
+                                            for="prd-check30">자켓</label></div>
                                 </div>
                             </div>
                             <div class="prd-category-check">
                                 <div class="prd-title">언더웨어/라운지웨어</div>
                                 <div class="prd-contents">
-                                    <div><input type="checkbox" />언더웨어/라운지웨어 전체</div>
-                                    <div><input type="checkbox" />언더웨어</div>
-                                    <div><input type="checkbox" />라운지웨어</div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check31" /><label
+                                            for="prd-check31">언더웨어/라운지웨어
+                                            전체</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check32" /><label
+                                            for="prd-check32">언더웨어</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check33" /><label
+                                            for="prd-check33">라운지웨어</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="choose-filter-wrapper">
+                    <div class="choose-filter-wrapper pcView">
                         <div class="choose-filter">
                             <button>
                                 <div>상의 전체</div>
@@ -246,7 +360,7 @@
                             초기화
                         </button>
                     </div>
-                    <div class="apply-category-btn">
+                    <div class="apply-category-btn pcView">
                         <button class="apply-btn">적용</button>
                         <button class="reset-btn">초기화</button>
                     </div>
@@ -267,7 +381,7 @@
                             </svg>
                         </div>
                         <ul>
-                            <li>#</li>
+                            <li class="active">#</li>
                             <li>A</li>
                             <li>B</li>
                             <li>C</li>
@@ -395,8 +509,28 @@
                             </div>
                         </div>
                     </div>
-                    <div class="choose-filter-wrapper">
+                    <div class="choose-filter-wrapper pcView">
                         <div class="choose-filter">
+                            <button>
+                                <div>123,123-1,231,000</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>Brunello Cucineli</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
                             <button>
                                 <div>상의 전체</div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
@@ -407,37 +541,79 @@
                                         fill="#5C5C5C" />
                                 </svg>
                             </button>
+                            <button>
+                                <div>멀티컬러</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
                         </div>
-                        <button>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
-                                fill="none">
-                                <g clip-path="url(#clip0_2556_36650)">
-                                    <path
-                                        d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
-                                        stroke="black" stroke-linecap="round" />
-                                    <path
-                                        d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
-                                        fill="black" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_2556_36650">
-                                        <rect width="13" height="12" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            초기화
-                        </button>
                     </div>
-                    <div class="apply-category-btn">
+                    <div class="apply-category-btn pcView">
                         <button class="apply-btn">적용</button>
                         <button class="reset-btn">초기화</button>
                     </div>
                 </div>
                 <div class="prd-dept2-category" id="goodsSearchForm">
                     <div class="price-filter">
-                        <input type="text" id="range-slider" name="range" />
+                        <div class="irs_wrap">
+                            <span>₩ 0</span>
+                            <input type="text" name="my_range" value="" class="js-range-slider" />
+                            <span>+ ₩ 10,000,000</span>
+                        </div>
+                        <div class="price-view">
+                            <span>직접입력</span>
+                            <span>
+                                <input class="input_sfilter" type="tel" inputmode="numeric"
+                                    placeholder="{=number_format(filterMinPrice)}" value="{filterMinPrice}"
+                                    name="min_price_tmp" />
+                            </span>
+                            <span class="dash">-</span>
+                            <span>
+                                <input class="input_sfilter" type="tel" inputmode="numeric"
+                                    placeholder="{=number_format(filterMaxPrice)}" value="{filterMaxPrice}"
+                                    name="max_price_tmp" />
+                            </span>
+                        </div>
                     </div>
-                    <div class="choose-filter-wrapper">
+                    <div class="choose-filter-wrapper mobileView">
+                        <div class="choose-filter">
+                            <button>
+                                <div>123,123-1,231,000</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button class="reset-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_2556_36650)">
+                                        <path
+                                            d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                            stroke="black" stroke-linecap="round" />
+                                        <path
+                                            d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2556_36650">
+                                            <rect width="13" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                초기화
+                            </button>
+                        </div>
+                    </div>
+                    <div class="choose-filter-wrapper pcView">
                         <div class="choose-filter">
                             <button>
                                 <div>123,123-1,231,000</div>
@@ -500,179 +676,232 @@
                             초기화
                         </button>
                     </div>
-                    <div class="apply-category-btn">
-                        <button class="apply-btn">적용</button>
-                        <button class="reset-btn">초기화</button>
-                    </div>
-                </div>
-                <div class="prd-dept2-category prd-color">
-                    <div class="prd-color-wrapper">
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: white;"></div>
-                            <div>화이트</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FFC;"></div>
-                            <div>아이보리</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #B8860B;"></div>
-                            <div>베이지</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #663300;"></div>
-                            <div>브라운</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #990000;"></div>
-                            <div>버건디</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FF0000;"></div>
-                            <div>레드</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FF99FF;"></div>
-                            <div>연핑크</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FF00CC;"></div>
-                            <div>핑크</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FF9999;"></div>
-                            <div>피치</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FF6600;"></div>
-                            <div>오렌지</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #FFFF00;"></div>
-                            <div>옐로우</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #99FFCC;"></div>
-                            <div>민트</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #666600;"></div>
-                            <div>카키</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #009900;"></div>
-                            <div>그린</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #66CCFF;"></div>
-                            <div>연하늘</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #0000FF;"></div>
-                            <div>블루</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #00008B;"></div>
-                            <div>네이비</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #CC99FF;"></div>
-                            <div>연보라</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #660099;"></div>
-                            <div>퍼플</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #BCBCBC;"></div>
-                            <div>그레이</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <div class="prd-color" style="background-color: #000000;"></div>
-                            <div>블랙</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                fill="none">
-                                <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28669)"
-                                    stroke="#EFEFEF" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2608_28669" x1="3.33333" y1="8" x2="54" y2="43"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="0.325" stop-color="#FFCA41" />
-                                        <stop offset="0.799065" stop-color="#5A3806" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div>골드</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                fill="none">
-                                <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50109)"
-                                    stroke="#EFEFEF" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2537_50109" x1="3.33333" y1="8" x2="54" y2="43"
-                                        gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="white" />
-                                        <stop offset="0.372028" stop-color="#C4CACE" />
-                                        <stop offset="0.782111" stop-color="#4C5358" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div>실버</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                fill="none">
-                                <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50112)"
-                                    stroke="#EFEFEF" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2537_50112" x1="3.33333" y1="8" x2="36.6667"
-                                        y2="32.3333" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#3CB9FC" />
-                                        <stop offset="0.5" stop-color="#8A2BE2" />
-                                        <stop offset="1" stop-color="#120052" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div>네온</div>
-                        </div>
-                        <div class="prd-color-item">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
-                                fill="none">
-                                <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28675)"
-                                    stroke="#EFEFEF" />
-                                <defs>
-                                    <linearGradient id="paint0_linear_2608_28675" x1="3.33333" y1="8" x2="36.6667"
-                                        y2="32.3333" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#70FF59" />
-                                        <stop offset="0.513507" stop-color="#1329F0" />
-                                        <stop offset="1" stop-color="#D01F1F" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <div>멀티컬러</div>
-                        </div>
-                    </div>
-                    <div class="apply-category-btn">
+                    <div class="apply-category-btn pcView">
                         <button class="apply-btn">적용</button>
                         <button class="reset-btn">초기화</button>
                     </div>
                 </div>
             </div>
+            <div class="prd-dept2-category prd-color">
+                <div class="prd-color-wrapper">
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: white;"></div>
+                        <div>화이트</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FFC;"></div>
+                        <div>아이보리</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #B8860B;"></div>
+                        <div>베이지</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #663300;"></div>
+                        <div>브라운</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #990000;"></div>
+                        <div>버건디</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF0000;"></div>
+                        <div>레드</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF99FF;"></div>
+                        <div>연핑크</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF00CC;"></div>
+                        <div>핑크</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF9999;"></div>
+                        <div>피치</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF6600;"></div>
+                        <div>오렌지</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FFFF00;"></div>
+                        <div>옐로우</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #99FFCC;"></div>
+                        <div>민트</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #666600;"></div>
+                        <div>카키</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #009900;"></div>
+                        <div>그린</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #66CCFF;"></div>
+                        <div>연하늘</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #0000FF;"></div>
+                        <div>블루</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #00008B;"></div>
+                        <div>네이비</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #CC99FF;"></div>
+                        <div>연보라</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #660099;"></div>
+                        <div>퍼플</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #BCBCBC;"></div>
+                        <div>그레이</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #000000;"></div>
+                        <div>블랙</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28669)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2608_28669" x1="3.33333" y1="8" x2="54" y2="43"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.325" stop-color="#FFCA41" />
+                                    <stop offset="0.799065" stop-color="#5A3806" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>골드</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50109)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2537_50109" x1="3.33333" y1="8" x2="54" y2="43"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.372028" stop-color="#C4CACE" />
+                                    <stop offset="0.782111" stop-color="#4C5358" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>실버</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50112)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2537_50112" x1="3.33333" y1="8" x2="36.6667"
+                                    y2="32.3333" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3CB9FC" />
+                                    <stop offset="0.5" stop-color="#8A2BE2" />
+                                    <stop offset="1" stop-color="#120052" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>네온</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28675)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2608_28675" x1="3.33333" y1="8" x2="36.6667"
+                                    y2="32.3333" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#70FF59" />
+                                    <stop offset="0.513507" stop-color="#1329F0" />
+                                    <stop offset="1" stop-color="#D01F1F" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>멀티컬러</div>
+                    </div>
+                </div>
+                <div class="apply-category-btn pcView">
+                    <button class="apply-btn">적용</button>
+                    <button class="reset-btn">초기화</button>
+                </div>
+            </div>
+            <div class="choose-filter-wrapper mobileView">
+                <div class="choose-filter">
+                    <button>
+                        <div>123,123-1,231,000</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>Brunello Cucineli</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>상의 전체</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>멀티컬러</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button class="reset-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                            <g clip-path="url(#clip0_2556_36650)">
+                                <path
+                                    d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                    stroke="black" stroke-linecap="round" />
+                                <path
+                                    d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2556_36650">
+                                    <rect width="13" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        초기화
+                    </button>
+                </div>
+            </div>
+            <div class="apply-category-btn mobileView">
+                <button class="apply-btn">적용</button>
+                <button class="reset-btn">초기화</button>
+            </div>
         </div>
     </div>
     <ul class="category-filter child-category">
-        <li><a href="/goods/catalog?code=00010004">전체보기</a></li>
+        <li class="active"><a href="/goods/catalog?code=00010004">전체보기</a></li>
         <li><a href="/goods/catalog?code=00010003">의류</a></li>
         <li><a href="/goods/catalog?code=00010002">신발</a></li>
         <li><a href="/goods/catalog?code=00010001">가방</a></li>
         <li><a href="/goods/catalog?code=00010001">악세서리</a></li>
     </ul>
 </div>
-
 <script>
     $(document).ready(function () {
         // 성별 드롭다운 토글
@@ -704,31 +933,38 @@
         $(".prd-dept1-items").click(function () {
             var index = $(this).index();
             var isOpen = $(".prd-dept2-category").eq(index).is(":visible");
-            $(".prd-dept2-category").slideUp(500);
-            if (!isOpen) {
-                $(".prd-dept2-category").eq(index).slideDown(500);
+            if ($(window).width() <= 900) {
+                $(".prd-dropdown-dept1 li").css("display", "flex");
             }
             $(".prd-dept1-items").removeClass("active");
-            $(this).addClass("active");
-        });
+            $(".prd-dept2-category").slideUp(500);
 
+            if (!isOpen) {
+                $(this).addClass("active");
+                $(".prd-dept2-category").eq(index).slideDown(500);
+
+                if ($(window).width() <= 900) {
+                    setTimeout(function () {
+                        $(".prd-dept1-items.active").nextAll().css("display", "none");
+                    }, 100);
+                }
+            }
+        });
+        $(document).on("click", function (event) {
+            if ($(window).width() <= 900) {
+                if (!$(event.target).closest(".prd-dropdown-dept1").length) {
+                    $(".prd-dept1-items.active").removeClass("active").nextAll().slideUp(500);
+                }
+            }
+        });
         $(".prd-dept2-category").hide();
         $(".product-detail-dropdown").hide();
 
-        $(".product-detail-title").click(function () {
+        $(".product-detail-title").click(function () {   // 상세정보 드롭다운 토글
             if ($(".product-detail-dropdown").is(":visible")) {
                 $(".product-detail-dropdown").slideUp(500);
             } else {
                 $(".product-detail-dropdown").slideDown(500);
-            }
-        });
-
-        // 드롭다운 바깥 클릭 시 드롭다운 닫기
-        $(document).mouseup(function (e) {
-            var container = $(".brand-collection-parent");
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
-                $(".arrivals-btn").removeClass("rotate");
-                $(".dropdown-content").slideUp(500);
             }
         });
     });  
@@ -3087,76 +3323,35 @@
 </ul>
 
 <div id="catalog_page">
-    {=showCategoryLight(categoryData.category_code)}
-    <div class="goods-list-title">
-        <div class="title-wrap">
-            <h4>
-                {? substr(categoryData.category_code, 0, 4) == '0001'}Man
-                {: substr(categoryData.category_code, 0, 4) == '0002'}Woman
-                {: substr(categoryData.category_code, 0, 4) == '0003'}Kids
-                {: substr(categoryData.category_code, 0, 4) == '0004'}Life{/}
-            </h4>
-            <p class="sub-title">{categoryData.title}</p>
-        </div>
-        {? childCategoryList}
-        <ul class="child-category">
-            {@ childCategoryList}
-            <li><a href="/goods/catalog?code={.category_code}">{.title}</a></li>
-            {/}
-        </ul>
-        {/}
-    </div>
-
-    <!--[ 상단 꾸미기 HTML ]-->
-    <!--{? categoryData.top_html }-->
-    <div class="category_edit_area mobile_img_adjust">
-        {categoryData.top_html}
-    </div>
-    <!--{ / }-->
     <!-- ------- 검색필터, 추천상품, 상품정렬( 파일위치 : [스킨폴더]/goods/_search_form_light.html ) ------- -->
     {=showGoodsSearchFormLight()}
     <!-- ------- //검색필터, 추천상품, 상품정렬 ------- -->
 </div>
 
-<div id="wish_alert">
-    <div class="wa_on"></div>
-    <div class="wa_off"></div>
-    <div class="wa_msg"></div>
-</div>
-
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const colorItems = document.querySelectorAll('.prd-color-item');
+        colorItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                const isActive = this.classList.contains('active');
+                if (!isActive) {
+                    this.classList.add('active');
+                } else {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
     var brandSwiper = new Swiper('#brandSwiper', {
         slidesPerView: 'auto',
         freeMode: true
     });
 
     $(document).ready(function () {
-        $("#range-slider").ionRangeSlider({
-            type: "double",
-            min: 0,
-            max: 10000000,
-            from: 0,
-            to: 10000000,
-            step: 1,
-            prettify_enabled: true,
-            prettify: function (num) {
-                return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            },
-            decorate_both: false,
-            decorate: function (value) {
-                return value;
-            },
-            onStart: function (data) {
-                // min과 max에만 달러 표시 추가
-                $('.irs-min').html('$' + data.from_pretty);
-                $('.irs-max').html('$' + data.to_pretty);
-            },
-        });
-
         $('#searchModule #searchVer2').show();
         colorFilter_white('#searchFilterSelected .color_type');
 
-        const svgButtons = document.querySelectorAll('.product-view svg');
+        const svgButtons = document.querySelectorAll('.product-view div');
         const productBody = document.querySelector('.product-collection-body');
 
         svgButtons.forEach(button => {
@@ -3167,8 +3362,10 @@
 
                 if (columns === 4) {
                     productBody.classList.add('view-4');
+                    button.parentElement.classList.add('less-view');
                 } else {
                     productBody.classList.remove('view-4');
+                    button.parentElement.classList.remove('less-view');
                 }
             });
         });
