@@ -176,152 +176,517 @@
                             <li>Bag</li>
                             <li>Accesories</li>
                         </ul>
-                        <div class="prd-category-wrapper">
-                            <button class="reset-btn">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_2556_36650)">
-                                        <path
-                                            d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
-                                            stroke="black" stroke-linecap="round" />
-                                        <path
-                                            d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
-                                            fill="black" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_2556_36650">
-                                            <rect width="13" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                초기화
-                            </button>
-                            <div class="prd-category-check">
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
-                                            for="prd-check1">의류 전체</label>
+                        <div class="prd-category-list">
+                            <div class="prd-category-wrapper active-list">
+                                <button class="reset-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2556_36650)">
+                                            <path
+                                                d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                                stroke="black" stroke-linecap="round" />
+                                            <path
+                                                d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2556_36650">
+                                                <rect width="13" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    초기화
+                                </button>
+                                <div class="prd-category-check">
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                                for="prd-check1">의류 전체</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">상의</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                                for="prd-check2">상의 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                                for="prd-check3">티셔츠/폴로</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                                for="prd-check4">셔츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                                for="prd-check5">후드</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check6" /><label
+                                                for="prd-check6">스웨트셔츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check7" /><label
+                                                for="prd-check7">니트웨어</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check8" /><label
+                                                for="prd-check8">가디건</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">하의</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                                for="prd-check9">하의 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">캐주얼팬츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check11" /><label
+                                                for="prd-check11">쇼츠팬츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check12" /><label
+                                                for="prd-check12">점프수트/오버울</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">아우터</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                                for="prd-check13">아우터
+                                                전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check14" /><label
+                                                for="prd-check14">다운/패딩</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check15" /><label
+                                                for="prd-check15">코트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check16" /><label
+                                                for="prd-check16">트렌치코트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check17" /><label
+                                                for="prd-check17">블레이저</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check18" /><label
+                                                for="prd-check18">베스트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check19" /><label
+                                                for="prd-check19">무스탕/퍼/시어링</label></div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">수트</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">수트 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check21" /><label
+                                                for="prd-check21">수트세트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check22" /><label
+                                                for="prd-check22">수트팬츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check23" /><label
+                                                for="prd-check23">수트
+                                                블레이저/베스트</label></div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">스포츠웨어</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">스포츠웨어 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
+                                                for="prd-check25">수영복</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
+                                                for="prd-check26">스키복</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check27" /><label
+                                                for="prd-check27">세트</label></div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check28" /><label
+                                                for="prd-check28">상의</label></div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check29" /><label
+                                                for="prd-check29">하의</label></div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check30" /><label
+                                                for="prd-check30">자켓</label></div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">언더웨어/라운지웨어</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check31" /><label
+                                                for="prd-check31">언더웨어/라운지웨어
+                                                전체</label></div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check32" /><label
+                                                for="prd-check32">언더웨어</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check33" /><label
+                                                for="prd-check33">라운지웨어</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">상의</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
-                                            for="prd-check2">상의 전체</label>
+                            <div class="prd-category-wrapper">
+                                <button class="reset-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2556_36650)">
+                                            <path
+                                                d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                                stroke="black" stroke-linecap="round" />
+                                            <path
+                                                d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2556_36650">
+                                                <rect width="13" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    초기화
+                                </button>
+                                <div class="prd-category-check">
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                                for="prd-check1">신발 전체</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
-                                            for="prd-check3">티셔츠/폴로</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">부츠</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                                for="prd-check2">부츠 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                                for="prd-check3">앵클부츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                                for="prd-check4">미들부츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                                for="prd-check5">레인부츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check6" /><label
+                                                for="prd-check6">윈터부츠</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check7" /><label
+                                                for="prd-check7">기타</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
-                                            for="prd-check4">셔츠</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">샌들/슬라이드</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                                for="prd-check9">샌들/슬라이드 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">샌들</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check11" /><label
+                                                for="prd-check11">슬라이드</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check12" /><label
+                                                for="prd-check12">플립플랍</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
-                                            for="prd-check5">후드</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">드레스슈즈</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                                for="prd-check13">드레스슈즈
+                                                전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check14" /><label
+                                                for="prd-check14">몽크스트랩</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check15" /><label
+                                                for="prd-check15">레이스업 슈즈</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check6" /><label
-                                            for="prd-check6">스웨트셔츠</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">로퍼</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">로퍼 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check21" /><label
+                                                for="prd-check21">로퍼</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check22" /><label
+                                                for="prd-check22">에스파드류</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check7" /><label
-                                            for="prd-check7">니트웨어</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check8" /><label
-                                            for="prd-check8">가디건</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">스니커즈</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">스니커즈 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
+                                                for="prd-check25">러닝화</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
+                                                for="prd-check26">슬립온</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check27" /><label
+                                                for="prd-check27">하이탑</label></div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check28" /><label
+                                                for="prd-check28">로우탑</label></div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">하의</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
-                                            for="prd-check9">하의 전체</label>
+                            <div class="prd-category-wrapper">
+                                <button class="reset-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2556_36650)">
+                                            <path
+                                                d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                                stroke="black" stroke-linecap="round" />
+                                            <path
+                                                d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2556_36650">
+                                                <rect width="13" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    초기화
+                                </button>
+                                <div class="prd-category-check">
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                                for="prd-check1">가방 전체</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
-                                            for="prd-check10">캐주얼팬츠</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">크로스백/숄더백</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                                for="prd-check2">크로스백/숄더백 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                                for="prd-check3">크로스백</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                                for="prd-check4">숄더백</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                                for="prd-check5">벨트백</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check11" /><label
-                                            for="prd-check11">쇼츠팬츠</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">토드백</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                                for="prd-check9">토드백 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">토드백</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check12" /><label
-                                            for="prd-check12">점프수트/오버울</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">백팩</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                                for="prd-check13">백팩
+                                                전체</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">클러치</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">클러치 전체</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">트러블백</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">트러블백 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
+                                                for="prd-check25">러기지</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
+                                                for="prd-check26">더플백</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">브리프케스</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">브리프케이스 전체</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">기타</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">기타 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">스포츠백</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">기타</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">아우터</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
-                                            for="prd-check13">아우터
-                                            전체</label>
+                            <div class="prd-category-wrapper">
+                                <button class="reset-btn">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_2556_36650)">
+                                            <path
+                                                d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                                stroke="black" stroke-linecap="round" />
+                                            <path
+                                                d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                                fill="black" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2556_36650">
+                                                <rect width="13" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    초기화
+                                </button>
+                                <div class="prd-category-check">
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                                for="prd-check1">액세서리 전체</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check14" /><label
-                                            for="prd-check14">다운/패딩</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check15" /><label
-                                            for="prd-check15">코트</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check16" /><label
-                                            for="prd-check16">트렌치코트</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check17" /><label
-                                            for="prd-check17">블레이저</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check18" /><label
-                                            for="prd-check18">베스트</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check19" /><label
-                                            for="prd-check19">무스탕/퍼/시어링</label></div>
                                 </div>
-                            </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">수트</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
-                                            for="prd-check20">수트 전체</label>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">지갑</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                                for="prd-check2">지갑 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                                for="prd-check3">카드지갑</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                                for="prd-check4">머니클립</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                                for="prd-check5">동전지갑</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check21" /><label
-                                            for="prd-check21">수트세트</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check22" /><label
-                                            for="prd-check22">수트팬츠</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check23" /><label
-                                            for="prd-check23">수트
-                                            블레이저/베스트</label></div>
                                 </div>
-                            </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">스포츠웨어</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
-                                            for="prd-check24">스포츠웨어 전체</label>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">모자</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                                for="prd-check9">모자 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">볼캡</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">비니</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">버킷햇</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
-                                            for="prd-check25">수영복</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
-                                            for="prd-check26">스키복</label>
-                                    </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check27" /><label
-                                            for="prd-check27">세트</label></div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check28" /><label
-                                            for="prd-check28">상의</label></div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check29" /><label
-                                            for="prd-check29">하의</label></div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check30" /><label
-                                            for="prd-check30">자켓</label></div>
                                 </div>
-                            </div>
-                            <div class="prd-category-check">
-                                <div class="prd-title">언더웨어/라운지웨어</div>
-                                <div class="prd-contents">
-                                    <div><input type="checkbox" class="prd-check" id="prd-check31" /><label
-                                            for="prd-check31">언더웨어/라운지웨어
-                                            전체</label></div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check32" /><label
-                                            for="prd-check32">언더웨어</label>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">머플러/스카프</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                                for="prd-check13">머플러/스카프
+                                                전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">머플러</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                                for="prd-check10">스카프</label>
+                                        </div>
                                     </div>
-                                    <div><input type="checkbox" class="prd-check" id="prd-check33" /><label
-                                            for="prd-check33">라운지웨어</label>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">벨트</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">벨트 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">캐주얼벨트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">세트</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                                for="prd-check20">기타</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">시계</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">시계 전체</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">주얼리</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">주얼리 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">반지</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">목걸이</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">팔찌</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">브로치/핀</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">커프링크스</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prd-category-check">
+                                    <div class="prd-title">기타</div>
+                                    <div class="prd-contents">
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">기타 전체</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">스포츠백</label>
+                                        </div>
+                                        <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                                for="prd-check24">기타</label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -366,7 +731,7 @@
                     </div>
                 </div>
                 <div class="prd-dept2-category" id="brandSwiper">
-                    <div class="prd-brand-search">
+                    <div class="prd-brand-search swiper-container">
                         <div class="brand-search-input">
                             <input placeholder="브랜드를 검색해주세요." />
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34"
@@ -380,37 +745,99 @@
                                 <path d="M20.7852 20.2832L26.4999 25.998" stroke="black" stroke-width="2" />
                             </svg>
                         </div>
-                        <ul>
-                            <li class="active">#</li>
-                            <li>A</li>
-                            <li>B</li>
-                            <li>C</li>
-                            <li>D</li>
-                            <li>E</li>
-                            <li>F</li>
-                            <li>G</li>
-                            <li>H</li>
-                            <li>I</li>
-                            <li>J</li>
-                            <li>K</li>
-                            <li>L</li>
-                            <li>M</li>
-                            <li>N</li>
-                            <li>O</li>
-                            <li>P</li>
-                            <li>Q</li>
-                            <li>R</li>
-                            <li>S</li>
-                            <li>T</li>
-                            <li>U</li>
-                            <li>V</li>
-                            <li>W</li>
-                            <li>X</li>
-                            <li>Y</li>
-                            <li>Z</li>
+                        <ul class="swiper-wrapper">
+                            <li class="active swiper-slide">#</li>
+                            <li class="swiper-slide">A</li>
+                            <li class="swiper-slide">B</li>
+                            <li class="swiper-slide">C</li>
+                            <li class="swiper-slide">D</li>
+                            <li class="swiper-slide">E</li>
+                            <li class="swiper-slide">F</li>
+                            <li class="swiper-slide">G</li>
+                            <li class="swiper-slide">H</li>
+                            <li class="swiper-slide">I</li>
+                            <li class="swiper-slide">J</li>
+                            <li class="swiper-slide">K</li>
+                            <li class="swiper-slide">L</li>
+                            <li class="swiper-slide">M</li>
+                            <li class="swiper-slide">N</li>
+                            <li class="swiper-slide">O</li>
+                            <li class="swiper-slide">P</li>
+                            <li class="swiper-slide">Q</li>
+                            <li class="swiper-slide">R</li>
+                            <li class="swiper-slide">S</li>
+                            <li class="swiper-slide">T</li>
+                            <li class="swiper-slide">U</li>
+                            <li class="swiper-slide">V</li>
+                            <li class="swiper-slide">W</li>
+                            <li class="swiper-slide">X</li>
+                            <li class="swiper-slide">Y</li>
+                            <li class="swiper-slide">Z</li>
                         </ul>
                     </div>
-                    <div class="prd-brand-keyword swiper-wrapper">
+                    <div class="prd-brand-keyword mobileView">
+                        <div class="keyword-wrapper">
+                            <div class="alphabet-banner">#</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>032C</li>
+                                    <li>04651/A TRIP IN A BAG</li>
+                                    <li>14 BROS</li>
+                                    <li>360 CASHMERE</li>
+                                    <li>360 CASHMIERE PRE</li>
+                                    <li>3JUIN</li>
+                                    <li>3X1</li>
+                                    <li>424</li>
+                                    <li>5PROGRESS</li>
+                                    <li>813</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="keyword-wrapper">
+                            <div class="alphabet-banner">A</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>A COLD WALL</li>
+                                    <li>A PAPER KID</li>
+                                    <li>A.P.C</li>
+                                    <li>A.P.C. KIDS</li>
+                                    <li>ACNE</li>
+                                    <li>ACNE STUDIOS</li>
+                                    <li>ACUPUNCTURE</li>
+                                    <li>ADER ERROR</li>
+                                    <li>ADIDAS BY STELLA MCCARTNEY</li>
+                                    <li>ADIDAS X BALENCIAGA</li>
+                                    <li>ADRIANA DEGREAS</li>
+                                    <li>AGNONA</li>
+                                    <li>AGOLDE</li>
+                                    <li>ALAIA</li>
+                                    <li>ALAMEDA TURQUESA</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="keyword-wrapper">
+                            <div class="alphabet-banner">B</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>BACON</li>
+                                    <li>BAIN DE MER</li>
+                                    <li>BALENCIAGA</li>
+                                    <li>BALENCIAGA KIDS KIDS</li>
+                                    <li>BALLY</li>
+                                    <li>BALMAIN</li>
+                                    <li>BALR</li>
+                                    <li>BARACUTA</li>
+                                    <li>BARBOUR INTERNATIONAL</li>
+                                    <li>BARBOUR KIDS</li>
+                                    <li>BARENA</li>
+                                    <li>BARROW</li>
+                                    <li>BARROWS</li>
+                                    <li>BASE</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prd-brand-keyword swiper-wrapper pcView">
                         <div class="keyword-wrapper swiper-slide">
                             <div class="alphabet-banner">#</div>
                             <div class="brand-list">
@@ -453,6 +880,20 @@
                                     <li>AGOLDE</li>
                                     <li>ALAIA</li>
                                     <li>ALAMEDA TURQUESA</li>
+                                </ul>
+                                <ul>
+                                    <li>ALANUI</li>
+                                    <li>ALANUI KIDS</li>
+                                    <li>ALBERTA FERRETTI</li>
+                                    <li>ALBERTO BIANI</li>
+                                    <li>ALCHESMIST</li>
+                                </ul>
+                                <ul>
+                                    <li>ALESSANDRA RICH</li>
+                                    <li>ALESSANDRO ASTE</li>
+                                    <li>ALESSANDRO ENRIGUEZ</li>
+                                    <li>ALEXANDER MCQUEEN</li>
+                                    <li>ALEXANDER MCQUEEN KIDS</li>
                                 </ul>
                             </div>
                         </div>
@@ -903,6 +1344,24 @@
     </ul>
 </div>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoryItems = document.querySelectorAll(".prd-category-container ul li");
+        const categoryWrappers = document.querySelectorAll(".prd-category-list .prd-category-wrapper");
+
+        categoryItems.forEach(function (item, index) {
+            item.addEventListener("click", function () {
+                categoryItems.forEach(function (item) {
+                    item.classList.remove("active-category");
+                });
+                categoryWrappers.forEach(function (wrapper) {
+                    wrapper.classList.remove("active-list");
+                });
+                this.classList.add("active-category");
+                categoryWrappers[index].classList.add("active-list");
+            });
+        });
+    });
+
     $(document).ready(function () {
         // 성별 드롭다운 토글
         $(".brand-collection-parent .banner-title").click(function () {
@@ -950,22 +1409,35 @@
                 }
             }
         });
-        $(document).on("click", function (event) {
-            if ($(window).width() <= 900) {
-                if (!$(event.target).closest(".prd-dropdown-dept1").length) {
-                    $(".prd-dept1-items.active").removeClass("active").nextAll().slideUp(500);
-                }
-            }
-        });
+
         $(".prd-dept2-category").hide();
         $(".product-detail-dropdown").hide();
 
-        $(".product-detail-title").click(function () {   // 상세정보 드롭다운 토글
-            if ($(".product-detail-dropdown").is(":visible")) {
-                $(".product-detail-dropdown").slideUp(500);
-            } else {
-                $(".product-detail-dropdown").slideDown(500);
-            }
+        $(document).ready(function () {
+            $(".product-detail-title").click(function (event) {
+                if ($(window).width() <= 900) {
+                    $(".product-detail-dropdown").slideToggle(500);
+                } else {
+                    if ($(".product-detail-dropdown").is(":visible")) {
+                        $(".product-detail-dropdown").slideUp(500);
+                    } else {
+                        $(".product-detail-dropdown").slideDown(500);
+                    }
+                }
+                event.stopPropagation();
+            });
+
+            $(".product-detail-dropdown").click(function (event) {
+                event.stopPropagation();
+            });
+
+            $(document).on("click", function (event) {
+                if ($(window).width() <= 900) {
+                    if (!$(event.target).closest('.product-detail-title').length) {
+                        $(".product-detail-dropdown").slideUp(500);
+                    }
+                }
+            });
         });
     });  
 </script>
@@ -3343,6 +3815,11 @@
         });
     });
     var brandSwiper = new Swiper('#brandSwiper', {
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+
+    var brandNameSwiper = new Swiper('.prd-brand-search', {
         slidesPerView: 'auto',
         freeMode: true
     });
