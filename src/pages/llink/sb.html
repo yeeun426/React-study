@@ -1,71 +1,3364 @@
 <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++
-@@ 카테고리 네비게이션 @@
-- 파일위치 : [스킨폴더]/_modules/category/category_gnb.html
-- 현재 3뎁스까지 노출 가능
+@@ "카테고리" 리스트 페이지 @@
+- 파일위치 : [스킨폴더]/goods/catalog.html
 ++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<link rel="stylesheet" href="/app/javascript/plugin/ion-rangeslider/ion.rangeSlider.min.css" />
+<script src="/app/javascript/plugin/ion-rangeslider/ion.rangeSlider.min.js"></script>
 
-<!--{ @ category }-->
-<li class="categoryDepth1 swiper-slide" data-category_code="{.category_code}">
-    <a class="categoryDepthLink designElement" designelement="category" href="/goods/catalog?code={.category_code}"><em>{.name}</em></a>
-    <!--{ ? .childs}-->
-    <div class="categorySub" id = {.name}>
-        <div class="categorySubKinds">
-            <a id="allCategoryLink" href="/goods/catalog?code={.category_code}" class="all-btn" style="display:none;" data-category-name="{.name}">
-                {.name} Wear
-            </a>
-            <div class = "category-view-all">View All Product</div>
-            <ul class = "categoryDepthParent">
-                <li class = "active-category">Apperal</li>
-                <li>Shoes</li>
-                <li>Bags</li>
-                <li>Accessories</li>
-            </ul>
-        </div>
-        <div class="categorySubWrap">
-            <ul class="categoryDepth2">
-                <!--{ @ .childs}-->
-                <li class="categorySubDepth" id = {..name}>
-                    <!--{ ? ..childs}-->
-                    <ul class="categoryDepth3">
-                        <!--{ @ ..childs}-->
-                        <li style = "order: {...category_code};"><a href="/goods/catalog?code={...category_code}">{...name}</a></li>
-                        <!--{ / }-->
-                    </ul>
-                    <a href="/goods/catalog?code={..category_code}">{..name} 전체보기</a>
-                    <!--{ / }-->
-                </li>
-                <!--{ / }-->
-            </ul>
-            <!--{ ? .node_banner }-->
-            <div class="categorySubBanner">
-                {.node_banner}
+<div class="newest-product-wrap">
+    <div class="new-arrivals-filter product-filter">
+        <div class="brand-collection-parent">
+            <button class="banner-title with-underline main-title">
+                Men
+                <div class="arrivals-btn"></div>
+            </button>
+            <div class="arrivals-sort">Sort :
+                <button class="sort-dropdown-btn">Newest</button>
+                <div class="sort-dropdown">
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Price High</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Price Low</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Popular</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Newest</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Best Selling</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Discount High</span>
+                    </div>
+                    <div class="sort-dropdown-items">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9" viewBox="0 0 11 9" fill="none">
+                            <path d="M9.91892 1L3.78716 7.96133L1 4.79709" stroke="black" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>Discount Low</span>
+                    </div>
+                </div>
             </div>
-            <!--{ / }-->
         </div>
-        <div class = "categorySubBrand">
-            <div class = "category-brand-banner">Recent Brands</div>
-            <div class = "categorySubBrandWrapper">
-                <div class = "categorySubImg">
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/categoryBrand_Ralph.png" />
-                    <div class = "gnb-brand-wrapper" >
-                        <div class = "gnb-brand-name">Ralph Lauren</div>
-                        <a class = "gnb-brand-shop">Shop now</a>
-                    </div>
-                </div>
-                <div class = "categorySubImg">
-                    <img src="/data/skin/llink_renewal_2023/images/renewal_202403/categoryBrand_Stussy.png" />
-                        <div class = "gnb-brand-wrapper" >
-                        <div class = "gnb-brand-name">Stussy</div>
-                        <a class = "gnb-brand-shop">Shop now</a>
-                    </div>
-                </div>
+        <div class="dropdown-content hidden-dropdown">
+            <div class="dropdown-category">
+                <div>Men</div>
+                <div>Women</div>
+                <div>Kids</div>
+                <div>Life</div>
             </div>
         </div>
     </div>
-    
-    <!--{ / }-->
-</li>
+    <div class="product-detail-filter">
+        <div class="product-detail-parent">
+            <div class="product-detail-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="2" cy="5" r="1.5" stroke="black" />
+                    <circle cx="2" cy="2" r="1.5" transform="matrix(-1 0 0 1 16 9)" stroke="black" />
+                    <path d="M3 5H16" stroke="black" />
+                    <path d="M13 11H5.06639e-07" stroke="black" />
+                </svg>
+                상세필터
+            </div>
+            <div class="product-view">
+                <div class="5*5"></div>
+                <div class="4*4"></div>
+            </div>
+        </div>
+        <div class="product-detail-dropdown">
+            <ul class="prd-dropdown-dept1">
+                <li class="prd-dept1-items">
+                    <div>
+                        <span>카테고리</span>
+                        <span>(0)</span>
+                    </div>
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li class="prd-dept1-items">
+                    <div>
+                        <span>브랜드</span>
+                        <span>(0)</span>
+                    </div>
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li class="prd-dept1-items prd-price">
+                    <div>
+                        <span>가격</span>
+                    </div>
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li class="prd-dept1-items">
+                    <div>
+                        <span>컬러</span>
+                        <span>(0)</span>
+                    </div>
+                    <svg class="open" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30L38 30" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M30 22L30 38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg class="close" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
+                        fill="none">
+                        <path d="M22 30H38" stroke="black" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </li>
+                <li class="mobileView prd-filter-title">상세 필터</li>
+            </ul>
+            <div class="prd-dropdown-dept2">
+                <div class="prd-dept2-category">
+                    <div class="prd-category-container">
+                        <ul>
+                            <li class="active-category">Apperal</li>
+                            <li>Shoes</li>
+                            <li>Bag</li>
+                            <li>Accesories</li>
+                        </ul>
+                        <div class="prd-category-wrapper">
+                            <button class="reset-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_2556_36650)">
+                                        <path
+                                            d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                            stroke="black" stroke-linecap="round" />
+                                        <path
+                                            d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2556_36650">
+                                            <rect width="13" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                초기화
+                            </button>
+                            <div class="prd-category-check">
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check1" /><label
+                                            for="prd-check1">의류 전체</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">상의</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check2" /><label
+                                            for="prd-check2">상의 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check3" /><label
+                                            for="prd-check3">티셔츠/폴로</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check4" /><label
+                                            for="prd-check4">셔츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check5" /><label
+                                            for="prd-check5">후드</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check6" /><label
+                                            for="prd-check6">스웨트셔츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check7" /><label
+                                            for="prd-check7">니트웨어</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check8" /><label
+                                            for="prd-check8">가디건</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">하의</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check9" /><label
+                                            for="prd-check9">하의 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check10" /><label
+                                            for="prd-check10">캐주얼팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check11" /><label
+                                            for="prd-check11">쇼츠팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check12" /><label
+                                            for="prd-check12">점프수트/오버울</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">아우터</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check13" /><label
+                                            for="prd-check13">아우터
+                                            전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check14" /><label
+                                            for="prd-check14">다운/패딩</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check15" /><label
+                                            for="prd-check15">코트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check16" /><label
+                                            for="prd-check16">트렌치코트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check17" /><label
+                                            for="prd-check17">블레이저</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check18" /><label
+                                            for="prd-check18">베스트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check19" /><label
+                                            for="prd-check19">무스탕/퍼/시어링</label></div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">수트</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check20" /><label
+                                            for="prd-check20">수트 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check21" /><label
+                                            for="prd-check21">수트세트</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check22" /><label
+                                            for="prd-check22">수트팬츠</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check23" /><label
+                                            for="prd-check23">수트
+                                            블레이저/베스트</label></div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">스포츠웨어</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check24" /><label
+                                            for="prd-check24">스포츠웨어 전체</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check25" /><label
+                                            for="prd-check25">수영복</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check26" /><label
+                                            for="prd-check26">스키복</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check27" /><label
+                                            for="prd-check27">세트</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check28" /><label
+                                            for="prd-check28">상의</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check29" /><label
+                                            for="prd-check29">하의</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check30" /><label
+                                            for="prd-check30">자켓</label></div>
+                                </div>
+                            </div>
+                            <div class="prd-category-check">
+                                <div class="prd-title">언더웨어/라운지웨어</div>
+                                <div class="prd-contents">
+                                    <div><input type="checkbox" class="prd-check" id="prd-check31" /><label
+                                            for="prd-check31">언더웨어/라운지웨어
+                                            전체</label></div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check32" /><label
+                                            for="prd-check32">언더웨어</label>
+                                    </div>
+                                    <div><input type="checkbox" class="prd-check" id="prd-check33" /><label
+                                            for="prd-check33">라운지웨어</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose-filter-wrapper pcView">
+                        <div class="choose-filter">
+                            <button>
+                                <div>상의 전체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_2556_36650)">
+                                    <path
+                                        d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                        stroke="black" stroke-linecap="round" />
+                                    <path
+                                        d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2556_36650">
+                                        <rect width="13" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            초기화
+                        </button>
+                    </div>
+                    <div class="apply-category-btn pcView">
+                        <button class="apply-btn">적용</button>
+                        <button class="reset-btn">초기화</button>
+                    </div>
+                </div>
+                <div class="prd-dept2-category" id="brandSwiper">
+                    <div class="prd-brand-search">
+                        <div class="brand-search-input">
+                            <input placeholder="브랜드를 검색해주세요." />
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34"
+                                fill="none">
+                                <path
+                                    d="M15.0687 6.99415C19.251 6.99415 22.6411 10.3844 22.6411 14.5666C22.6411 18.7489 19.2509 22.14 15.0687 22.14C10.8855 22.14 7.49625 18.749 7.49625 14.5666C7.49625 10.3843 10.8853 6.99415 15.0687 6.99415Z"
+                                    fill="black" fill-opacity="0.01" stroke="black" stroke-width="2" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.7852 20.2832L26.4999 25.998L20.7852 20.2832Z" fill="black"
+                                    fill-opacity="0.01" />
+                                <path d="M20.7852 20.2832L26.4999 25.998" stroke="black" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <ul>
+                            <li class="active">#</li>
+                            <li>A</li>
+                            <li>B</li>
+                            <li>C</li>
+                            <li>D</li>
+                            <li>E</li>
+                            <li>F</li>
+                            <li>G</li>
+                            <li>H</li>
+                            <li>I</li>
+                            <li>J</li>
+                            <li>K</li>
+                            <li>L</li>
+                            <li>M</li>
+                            <li>N</li>
+                            <li>O</li>
+                            <li>P</li>
+                            <li>Q</li>
+                            <li>R</li>
+                            <li>S</li>
+                            <li>T</li>
+                            <li>U</li>
+                            <li>V</li>
+                            <li>W</li>
+                            <li>X</li>
+                            <li>Y</li>
+                            <li>Z</li>
+                        </ul>
+                    </div>
+                    <div class="prd-brand-keyword swiper-wrapper">
+                        <div class="keyword-wrapper swiper-slide">
+                            <div class="alphabet-banner">#</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>032C</li>
+                                    <li>04651/A TRIP IN A BAG</li>
+                                    <li>14 BROS</li>
+                                    <li>360 CASHMERE</li>
+                                    <li>360 CASHMIERE PRE</li>
+                                </ul>
+                                <ul>
+                                    <li>3JUIN</li>
+                                    <li>3X1</li>
+                                    <li>424</li>
+                                    <li>5PROGRESS</li>
+                                    <li>813</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="keyword-wrapper swiper-slide">
+                            <div class="alphabet-banner">A</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>A COLD WALL</li>
+                                    <li>A PAPER KID</li>
+                                    <li>A.P.C</li>
+                                    <li>A.P.C. KIDS</li>
+                                    <li>ACNE</li>
+                                </ul>
+                                <ul>
+                                    <li>ACNE STUDIOS</li>
+                                    <li>ACUPUNCTURE</li>
+                                    <li>ADER ERROR</li>
+                                    <li>ADIDAS BY STELLA MCCARTNEY</li>
+                                    <li>ADIDAS X BALENCIAGA</li>
+                                </ul>
+                                <ul>
+                                    <li>ADRIANA DEGREAS</li>
+                                    <li>AGNONA</li>
+                                    <li>AGOLDE</li>
+                                    <li>ALAIA</li>
+                                    <li>ALAMEDA TURQUESA</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="keyword-wrapper swiper-slide">
+                            <div class="alphabet-banner">B</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>B COLD WALL</li>
+                                    <li>B PAPER KID</li>
+                                    <li>B.P.C</li>
+                                    <li>B.P.C. KIDS</li>
+                                    <li>BCNE</li>
+                                </ul>
+                                <ul>
+                                    <li>BCNE STUDIOS</li>
+                                    <li>BCUPUNCTURE</li>
+                                    <li>BDER ERROR</li>
+                                    <li>BDIDAS BY STELLA MCCARTNEY</li>
+                                    <li>BDIDAS X BALENCIAGA</li>
+                                </ul>
+                                <ul>
+                                    <li>BDRIANA DEGREAS</li>
+                                    <li>BGNONA</li>
+                                    <li>BGOLDE</li>
+                                    <li>BLAIA</li>
+                                    <li>BLAMEDA TURQUESA</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="keyword-wrapper swiper-slide">
+                            <div class="alphabet-banner">C</div>
+                            <div class="brand-list">
+                                <ul>
+                                    <li>COLD WALL</li>
+                                    <li>C PAPER KID</li>
+                                    <li>C.P.C</li>
+                                    <li>C.P.C. KIDS</li>
+                                    <li>ACNE</li>
+                                </ul>
+                                <ul>
+                                    <li>ACNE STUDIOS</li>
+                                    <li>ACUPUNCTURE</li>
+                                    <li>ADER ERROR</li>
+                                    <li>ADIDAS BY STELLA MCCARTNEY</li>
+                                    <li>ADIDAS X BALENCIAGA</li>
+                                </ul>
+                                <ul>
+                                    <li>ADRIANA DEGREAS</li>
+                                    <li>AGNONA</li>
+                                    <li>AGOLDE</li>
+                                    <li>ALAIA</li>
+                                    <li>ALAMEDA TURQUESA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="choose-filter-wrapper pcView">
+                        <div class="choose-filter">
+                            <button>
+                                <div>123,123-1,231,000</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>Brunello Cucineli</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>상의 전체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>멀티컬러</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="apply-category-btn pcView">
+                        <button class="apply-btn">적용</button>
+                        <button class="reset-btn">초기화</button>
+                    </div>
+                </div>
+                <div class="prd-dept2-category" id="goodsSearchForm">
+                    <div class="price-filter">
+                        <div class="irs_wrap">
+                            <span>₩ 0</span>
+                            <input type="text" name="my_range" value="" class="js-range-slider" />
+                            <span>+ ₩ 10,000,000</span>
+                        </div>
+                        <div class="price-view">
+                            <span>직접입력</span>
+                            <span>
+                                <input class="input_sfilter" type="tel" inputmode="numeric"
+                                    placeholder="{=number_format(filterMinPrice)}" value="{filterMinPrice}"
+                                    name="min_price_tmp" />
+                            </span>
+                            <span class="dash">-</span>
+                            <span>
+                                <input class="input_sfilter" type="tel" inputmode="numeric"
+                                    placeholder="{=number_format(filterMaxPrice)}" value="{filterMaxPrice}"
+                                    name="max_price_tmp" />
+                            </span>
+                        </div>
+                    </div>
+                    <div class="choose-filter-wrapper mobileView">
+                        <div class="choose-filter">
+                            <button>
+                                <div>123,123-1,231,000</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button class="reset-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_2556_36650)">
+                                        <path
+                                            d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                            stroke="black" stroke-linecap="round" />
+                                        <path
+                                            d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2556_36650">
+                                            <rect width="13" height="12" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                초기화
+                            </button>
+                        </div>
+                    </div>
+                    <div class="choose-filter-wrapper pcView">
+                        <div class="choose-filter">
+                            <button>
+                                <div>123,123-1,231,000</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>Brunello Cucineli</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>상의 전체</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                            <button>
+                                <div>멀티 컬러</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20"
+                                    fill="none">
+                                    <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                        fill="#5C5C5C" />
+                                </svg>
+                            </button>
+                        </div>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_2556_36650)">
+                                    <path
+                                        d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                        stroke="black" stroke-linecap="round" />
+                                    <path
+                                        d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2556_36650">
+                                        <rect width="13" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            초기화
+                        </button>
+                    </div>
+                    <div class="apply-category-btn pcView">
+                        <button class="apply-btn">적용</button>
+                        <button class="reset-btn">초기화</button>
+                    </div>
+                </div>
+            </div>
+            <div class="prd-dept2-category prd-color">
+                <div class="prd-color-wrapper">
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: white;"></div>
+                        <div>화이트</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FFC;"></div>
+                        <div>아이보리</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #B8860B;"></div>
+                        <div>베이지</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #663300;"></div>
+                        <div>브라운</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #990000;"></div>
+                        <div>버건디</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF0000;"></div>
+                        <div>레드</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF99FF;"></div>
+                        <div>연핑크</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF00CC;"></div>
+                        <div>핑크</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF9999;"></div>
+                        <div>피치</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FF6600;"></div>
+                        <div>오렌지</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #FFFF00;"></div>
+                        <div>옐로우</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #99FFCC;"></div>
+                        <div>민트</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #666600;"></div>
+                        <div>카키</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #009900;"></div>
+                        <div>그린</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #66CCFF;"></div>
+                        <div>연하늘</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #0000FF;"></div>
+                        <div>블루</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #00008B;"></div>
+                        <div>네이비</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #CC99FF;"></div>
+                        <div>연보라</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #660099;"></div>
+                        <div>퍼플</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #BCBCBC;"></div>
+                        <div>그레이</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <div class="prd-color" style="background-color: #000000;"></div>
+                        <div>블랙</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28669)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2608_28669" x1="3.33333" y1="8" x2="54" y2="43"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.325" stop-color="#FFCA41" />
+                                    <stop offset="0.799065" stop-color="#5A3806" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>골드</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50109)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2537_50109" x1="3.33333" y1="8" x2="54" y2="43"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white" />
+                                    <stop offset="0.372028" stop-color="#C4CACE" />
+                                    <stop offset="0.782111" stop-color="#4C5358" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>실버</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2537_50112)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2537_50112" x1="3.33333" y1="8" x2="36.6667"
+                                    y2="32.3333" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#3CB9FC" />
+                                    <stop offset="0.5" stop-color="#8A2BE2" />
+                                    <stop offset="1" stop-color="#120052" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>네온</div>
+                    </div>
+                    <div class="prd-color-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="19.5" fill="url(#paint0_linear_2608_28675)" stroke="#EFEFEF" />
+                            <defs>
+                                <linearGradient id="paint0_linear_2608_28675" x1="3.33333" y1="8" x2="36.6667"
+                                    y2="32.3333" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#70FF59" />
+                                    <stop offset="0.513507" stop-color="#1329F0" />
+                                    <stop offset="1" stop-color="#D01F1F" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div>멀티컬러</div>
+                    </div>
+                </div>
+                <div class="apply-category-btn pcView">
+                    <button class="apply-btn">적용</button>
+                    <button class="reset-btn">초기화</button>
+                </div>
+            </div>
+            <div class="choose-filter-wrapper mobileView">
+                <div class="choose-filter">
+                    <button>
+                        <div>123,123-1,231,000</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>Brunello Cucineli</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>상의 전체</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button>
+                        <div>멀티컬러</div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20" viewBox="0 0 22 20" fill="none">
+                            <rect x="0.5" width="21" height="20" rx="10" fill="#DDDDDD" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.4771 14.7598C14.8677 15.1503 15.5008 15.1503 15.8913 14.7598C16.2819 14.3692 16.2819 13.7361 15.8913 13.3455L12.388 9.8422L15.8913 6.33885C16.2819 5.94833 16.2819 5.31516 15.8913 4.92464C15.5008 4.53412 14.8677 4.53412 14.4771 4.92464L10.9738 8.42798L7.47029 4.92449C7.07977 4.53396 6.4466 4.53396 6.05608 4.92449C5.66555 5.31501 5.66555 5.94817 6.05608 6.3387L9.55958 9.8422L6.05608 13.3457C5.66555 13.7362 5.66555 14.3694 6.05608 14.7599C6.4466 15.1504 7.07977 15.1504 7.47029 14.7599L10.9738 11.2564L14.4771 14.7598Z"
+                                fill="#5C5C5C" />
+                        </svg>
+                    </button>
+                    <button class="reset-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12" viewBox="0 0 13 12" fill="none">
+                            <g clip-path="url(#clip0_2556_36650)">
+                                <path
+                                    d="M1.91667 9.24075C1.33747 8.40029 1 7.3914 1 6.30646C1 3.37578 3.46243 1 6.5 1C9.53757 1 12 3.37578 12 6.30646C12 8.34209 10.812 10.11 9.06838 11"
+                                    stroke="black" stroke-linecap="round" />
+                                <path
+                                    d="M4.7671 11.432C4.82183 11.735 4.528 11.9837 4.23822 11.8795L0.652137 10.5911C0.362353 10.487 0.293945 10.1082 0.529003 9.90933L3.43785 7.4479C3.6729 7.249 4.03513 7.37914 4.08986 7.68216L4.7671 11.432Z"
+                                    fill="black" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2556_36650">
+                                    <rect width="13" height="12" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        초기화
+                    </button>
+                </div>
+            </div>
+            <div class="apply-category-btn mobileView">
+                <button class="apply-btn">적용</button>
+                <button class="reset-btn">초기화</button>
+            </div>
+        </div>
+    </div>
+    <ul class="category-filter child-category">
+        <li class="active"><a href="/goods/catalog?code=00010004">전체보기</a></li>
+        <li><a href="/goods/catalog?code=00010003">의류</a></li>
+        <li><a href="/goods/catalog?code=00010002">신발</a></li>
+        <li><a href="/goods/catalog?code=00010001">가방</a></li>
+        <li><a href="/goods/catalog?code=00010001">악세서리</a></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(function () {
+        // 성별 드롭다운 토글
+        $(".brand-collection-parent .banner-title").click(function () {
+            var rotateExist = $(".arrivals-btn").hasClass("rotate");
+            if (rotateExist) {
+                $(".arrivals-btn").removeClass("rotate");
+                $(".dropdown-content").slideUp(500);
+            } else {
+                $(".arrivals-btn").addClass("rotate");
+                $(".dropdown-content").slideDown(500);
+            }
+        });
 
+        // Sort 드롭다운 토글
+        $(".sort-dropdown-btn").click(function () {
+            $(this).next(".sort-dropdown").toggleClass("sort-active");
+        });
 
-<!--{ / }-->
+        // Sort 클릭 시 체크
+        const dropdownItems = document.querySelectorAll('.sort-dropdown-items');
+        dropdownItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                this.querySelector('svg').style.display = 'block';
+            });
+        });
 
+        // prd-dept1-items 클릭 시 해당하는 prd-dept2-category 토글
+        $(".prd-dept1-items").click(function () {
+            var index = $(this).index();
+            var isOpen = $(".prd-dept2-category").eq(index).is(":visible");
+            $(".prd-dropdown-dept1 li").css("display", "flex");
+
+            $(".prd-dept1-items").removeClass("active");
+            $(".prd-dept2-category").slideUp(500);
+
+            if (!isOpen) {
+                $(this).addClass("active");
+                $(".prd-dept2-category").eq(index).slideDown(500);
+
+                setTimeout(function () {
+                    $(".prd-dept1-items.active").nextAll().css("display", "none");
+                }, 100);
+            }
+        });
+
+        $(".prd-dept2-category").hide();
+        $(".product-detail-dropdown").hide();
+
+        $(".product-detail-title").click(function () {   // 상세정보 드롭다운 토글
+            if ($(".product-detail-dropdown").is(":visible")) {
+                $(".product-detail-dropdown").slideUp(500);
+            } else {
+                $(".product-detail-dropdown").slideDown(500);
+            }
+        });
+    });  
+</script>
+<ul class="product-collection-body">
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143525">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/49577986_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                    <div class="items-status new-item">(NEW)</div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 베이지 Jimmy 러버 양각(돋을새김) 부츠</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            595,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,413,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Mens
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">7</div>
+                        <div>7.5</div>
+                        <div>8</div>
+                        <div>8.5</div>
+                        <div class="sold-out">9</div>
+                        <div>9.5</div>
+                        <div class="sold-out">10</div>
+                        <div>10.5</div>
+                        <div class="sold-out">11</div>
+                        <div>11.5</div>
+                        <div>12</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box sold-out">
+            <a href="/goods/view?no=143524">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/49026868_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                    <div class="items-status sold-out">(SOLD OUT)</div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 메탈릭 Bing 레더 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            750,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,800,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Mens
+                    </p>
+                    <div class="size-wrap">
+                        <div class="sold-out">3</div>
+                        <div class="sold-out">4</div>
+                        <div class="sold-out">5</div>
+                        <div class="sold-out">6</div>
+                        <div class="sold-out">7</div>
+                        <div class="sold-out">8</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143523">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/48694991_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                    <div class="items-status pre-order">(PRE-ORDER)</div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 퍼플 Eva 러버 스니커즈</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            436,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,036,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Bag
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">OS</div>
+                        <div>UNI</div>
+                        <div>TU</div>
+                        <div>U</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143522">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/48289978_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 퍼플 Azia 메탈 힐 샌들</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            611,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,471,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143521">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/48038923_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 멀티컬러 Logo 팬츠</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            354,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            819,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143520">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/48019577_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIL SANDER 여성 블랙 러버 부츠</p>
+                    <p class="brand-name">JIL SANDER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,071,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,565,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143519">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/47629999_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 연하늘 Gary 버진 울 자수 팬츠</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            511,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,481,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143518">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/47614167_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 블랙 Azia 스웨이드 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            588,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,413,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143517">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/47202538_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 아이보리 코튼 티셔츠</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            305,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            770,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143516">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/47144463_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 메탈릭 Cass 스웨이드 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            553,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,326,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143515">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/46887911_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 퍼플 Jersey 코튼 프린티드 티셔츠</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            284,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            512,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143514">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/46556199_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 연핑크 Abbaye 라지 나일론 자수 자켓</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,430,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            3,172,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143513">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/46324718_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 메탈릭 Zane 스팽글</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            592,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,481,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143512">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/46007478_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 블랙 Jersey 코튼 프린티드 티셔츠</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            265,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            512,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143511">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/45956115_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 메탈릭 100 새틴 애니멀 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,350,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            3,262,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143510">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/45782054_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 퍼플 Azia 스웨이드 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            588,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,413,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143509">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/44416929_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIL SANDER 여성 베이지 Classic 코트</p>
+                    <p class="brand-name">JIL SANDER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            2,538,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            6,870,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143508">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/44006128_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 블루 Louie 미니 비스코스 드레스</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            771,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,255,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143507">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/43607245_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 연핑크 Logo 오버사이즈 코튼 자수 스웨트셔츠 드레스</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            398,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            951,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143506">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/43280793_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 메탈릭 Florent PVC 자수 스니커즈</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            510,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,219,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143505">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/42828726_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="brand-name">JIL SANDER</p>
+                    <p class="goods-name">JIL SANDER 여성 메탈릭 Florent PVC</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,098,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,662,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143504">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/42080527_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 블루 On 버진 울 자켓</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            683,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,978,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143503">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/41779697_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 블랙 Logo 오버사이즈 메탈 리본 파카</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,630,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            4,295,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143502">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/41728677_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 퍼플 100 레더 펌프스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            773,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,858,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143501">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/41268073_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 블랙 Fujiko 미니 드레스</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,084,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,952,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143500">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/41056789_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 블랙 Nell 레더 힐 뮬</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            702,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,713,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143499">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/40911671_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 옐로우 Leopard 코튼 애니멀 티셔츠</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            341,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            874,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143498">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/40719664_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 퍼플 Long 새틴 드레스</p>
+                    <p class="brand-name">THE ATTICO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            896,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,333,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143497">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39969390_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">DOLCE &amp; GABBANA 남성 네이비 Dolce 팬츠</p>
+                    <p class="brand-name">DOLCE &amp; GABBANA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,078,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,994,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143496">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39969028_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 메탈릭 Intrecciato 레더 슬립 드레스</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            2,672,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            5,219,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143495">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39963433_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 화이트 Cassette 미니 백</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,496,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            3,089,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143494">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39953396_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">STONE ISLAND 남성 네이비 Island 나일론 수영팬츠</p>
+                    <p class="brand-name">STONE ISLAND</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            253,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            376,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143493">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39944855_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">AMIRI 남성 블랙 Amiri 코튼 프린티드 손목대</p>
+                    <p class="brand-name">AMIRI</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            809,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,371,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143492">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39940871_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">AMIRI 남성 블랙 Amiri 코튼 프린티드 손목대</p>
+                    <p class="brand-name">AMIRI</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            414,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,345,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143491">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39915364_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">PARIS TEXAS 여성 퍼플 Ita 메탈 부츠</p>
+                    <p class="brand-name">PARIS TEXAS</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            456,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,510,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143490">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39909366_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">PT TORINO 남성 퍼플 버진 울 후크 버클벨트</p>
+                    <p class="brand-name">PT TORINO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            291,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            666,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143489">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39888784_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">RENE CAOVILLA 여성 메탈릭 Morgana 레더 로퍼</p>
+                    <p class="brand-name">RENE CAOVILLA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            789,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,897,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143488">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39874253_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 화이트 Arco 스몰 레더 파우치</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            2,660,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            5,034,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143487">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39869573_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">THE ATTICO 여성 블랙 Glen 오버사이즈 스트라이프 블레이저</p>
+                    <p class="brand-name">THE ATTICO</p>
+
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,228,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,495,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143486">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39860329_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">PLAN C 여성 메탈릭 프린티드 스커트</p>
+                    <p class="brand-name">PLAN C</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            514,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,965,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143485">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39855975_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">VALENTINO 남성 메탈릭 Logo 러버 스터드 스니커즈</p>
+                    <p class="brand-name">VALENTINO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            793,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,907,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143484">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39819064_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">VALENTINO 여성 메탈릭 On 메탈 양면벨트</p>
+                    <p class="brand-name">VALENTINO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            676,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            912,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143483">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39815785_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 브라운 미디움 울 드레스</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            721,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,875,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143482">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39805753_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">GUCCI 남성 네이비 Ebony 캔버스 팬츠</p>
+                    <p class="brand-name">GUCCI</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,178,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,778,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143481">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39803772_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">SELF-PORTRAIT 여성 연하늘 Classic 셔츠</p>
+                    <p class="brand-name">SELF-PORTRAIT</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            307,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            835,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143480">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39791096_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">DIOR HOMME 남성 카키 Relaxed 나일론 조거 팬츠</p>
+                    <p class="brand-name">DIOR HOMME</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,285,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,584,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143479">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39791026_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">GUCCI 여성 메탈릭 Ebony 레더 숄더백</p>
+                    <p class="brand-name">GUCCI</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,610,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,629,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143478">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39785586_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">STONE ISLAND 남성 메탈릭 Island 코튼 팬츠</p>
+                    <p class="brand-name">STONE ISLAND</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            447,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            712,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143477">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39783191_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">JIMMY CHOO 여성 메탈릭 Avenue 레더 슬립 드레스</p>
+                    <p class="brand-name">JIMMY CHOO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            779,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,351,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143476">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39776042_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 메탈릭 Intreccio 메탈 실크 스카프</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            4,771,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            7,255,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143475">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39774158_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">MONCLER 여성 블랙 On 양각(돋을새김) 손목대</p>
+                    <p class="brand-name">MONCLER</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            623,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,009,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143474">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39773425_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 남성 아이보리 Intrecciato 러버 슬립온</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,042,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,790,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143473">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39761632_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">VALENTINO 여성 화이트 Valentino 콤펙트 코튼 셔츠</p>
+                    <p class="brand-name">VALENTINO</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            994,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,391,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143472">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39760326_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">TAGLIATORE 여성 연하늘 Bertha 린넨 자켓</p>
+                    <p class="brand-name">TAGLIATORE</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            951,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,432,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143471">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39746100_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">GUCCI 여성 메탈릭 Chevron 미니 레더 슬립 드레스</p>
+                    <p class="brand-name">GUCCI</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            1,708,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            2,451,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143470">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39734184_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">FAY ARCHIVE 남성 베이지 Archive 자켓</p>
+                    <p class="brand-name">FAY ARCHIVE</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            654,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,726,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143469">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39727765_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">STONE ISLAND 남성 카키 Island 코튼 쇼츠</p>
+                    <p class="brand-name">STONE ISLAND</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            370,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            590,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143468">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39714237_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">ALLUDE 여성 베이지 손목대</p>
+                    <p class="brand-name">ALLUDE</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            365,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,082,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143467">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39712461_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 화이트 On 하이웨이스트팬티</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            581,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            1,616,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+    <li class="product-collection-item">
+        <div class="item-box ">
+            <a href="/goods/view?no=143466">
+                <div class="img-wrap">
+                    <img src="https://devimg.llink.kr/leam/39707059_1_list1.JPG" alt="thumbnail"
+                        onerror="this.src='/data/skin/llink_renewal_2023/images/common/noimage.gif';" />
+                    <div class="items-wish"></div>
+                </div>
+                <div class="info-wrap">
+                    <p class="goods-name">BOTTEGA VENETA 여성 메탈릭 Intrecciato 백</p>
+                    <p class="brand-name">BOTTEGA VENETA</p>
+                    <p class="price-wrap">
+                        <span class="sale_price">
+                            3,283,000&#x20a9;
+                        </span>
+                        <span class="consumer_price">
+                            6,049,000&#x20a9;
+                        </span>
+                    </p>
+                </div>
+                <div class="info-detail-wrap">
+                    <p class="goods-sex">
+                        Womans
+                    </p>
+                    <div class="size-wrap">
+                        <div class="is-active">XS</div>
+                        <div>S</div>
+                        <div>M</div>
+                        <div>L</div>
+                        <div>XL</div>
+                    </div>
+                    <div class="item-view pcView">
+                        <span>QUICK VIEW</span>
+                        <span>ADD CART</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </li>
+</ul>
+
+<div id="catalog_page">
+    <!-- ------- 검색필터, 추천상품, 상품정렬( 파일위치 : [스킨폴더]/goods/_search_form_light.html ) ------- -->
+    {=showGoodsSearchFormLight()}
+    <!-- ------- //검색필터, 추천상품, 상품정렬 ------- -->
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const colorItems = document.querySelectorAll('.prd-color-item');
+        colorItems.forEach(function (item) {
+            item.addEventListener('click', function () {
+                const isActive = this.classList.contains('active');
+                if (!isActive) {
+                    this.classList.add('active');
+                } else {
+                    this.classList.remove('active');
+                }
+            });
+        });
+    });
+    var brandSwiper = new Swiper('#brandSwiper', {
+        slidesPerView: 'auto',
+        freeMode: true
+    });
+
+    $(document).ready(function () {
+        $('#searchModule #searchVer2').show();
+        colorFilter_white('#searchFilterSelected .color_type');
+
+        const svgButtons = document.querySelectorAll('.product-view div');
+        const productBody = document.querySelector('.product-collection-body');
+
+        svgButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const classes = this.getAttribute('class').split(' ');
+                const columns = parseInt(classes[0].split('*')[0]);
+                productBody.className = productBody.className.replace(/\bview-\d+\b/g, '');
+
+                if (columns === 4) {
+                    productBody.classList.add('view-4');
+                    button.parentElement.classList.add('less-view');
+                } else {
+                    productBody.classList.remove('view-4');
+                    button.parentElement.classList.remove('less-view');
+                }
+            });
+        });
+    });
+</script>
