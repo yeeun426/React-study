@@ -2112,7 +2112,7 @@
 }
 .goods-catalog .prd-dept2-category .prd-brand-search > ul > li:hover {
   color: black;
-  pointer: cursor;
+  cursor: pointer;
 }
 .goods-catalog .prd-dept2-category .prd-brand-search > ul > li.active {
   color: black;
