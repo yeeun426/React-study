@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    canvas {
+      border : 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width = "500" height="500"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext('2d');
+  
+    let isDrawing = false;
+  
+    function startDrawing(event) {
+      isDrawing = true;
+      ctx.beginPath();
+      ctx.moveTo(event.offsetX, event.offsetY); // 누르는 시점의 정보를 시작점으로 한다.
+      // console.log("마우스가 눌려짐");
+    }
+    function draw(event) {
+      if(isDrawing) {
+        ctx.lineTo(event.offsetX, event.offsetY); // 어디까지
+        ctx.stroke();
+      }
+    }
+    function stopDrawing(){
+      isDrawing = false;
+      ctx.closePath();
+
+    }
+    
+    canvas.addEventListener('mousemove', draw); // draw 함수가 호출이 아니고 등록
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mouseup', stopDrawing);
+  </script>
+</body>
+</html>
