@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "redux": "^5.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
   }
 }
