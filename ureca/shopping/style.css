@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    gap: 50px;
+    place-self: anchor-center;
+    align-items: anchor-center;
+    padding: 20px;
+}
+
+.logo {
+    height: 65px;
+    flex-grow: 1;
+}
+
+.header-input {
+    flex-grow: 1;
+    height: fit-content;
+    align-self: center;
+    padding: 20px 10px;
+    width: 450px;
+    border-radius: 20px;
+    border: 1px solid #8572d4;
+    flex-grow: 1;
+}
+
+.header-me {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.header-me button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.main-img {
+    width: 100vw;
+    height: 585px;
+    object-fit: cover;
+}
+
+.today-item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+section {
+    width: 75vw;
+    justify-self: center;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin : 0;
+}
+
+.today-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.special-list {
+    display: flex;
+    gap: 2%;
+}
+
+.special-img {
+    width: 49%;
+    height: 385px;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.item-price {
+    font-size: 19px;
+    color: #c80202;
+}
+
+.item-date {
+    display: flex;
+    gap: 8px;
+}
+
+.item-date span {
+    background: pink;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.today-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
