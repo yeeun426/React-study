@@ -15,20 +15,31 @@ header {
     flex-grow: 1;
 }
 
+.mynavbar {
+    flex-grow: 1;
+}
+
 .header-input {
     flex-grow: 1;
     height: fit-content;
     align-self: center;
-    padding: 20px 10px;
-    width: 450px;
+    padding: 15px 10px;
     border-radius: 20px;
     border: 1px solid #8572d4;
+}
+
+.navbar-brand {
     flex-grow: 1;
+    text-align-last: right;
+}
+
+.search-container {
+    width: 100%;
 }
 
 .header-me {
     display: flex;
-    gap: 30px;
+    gap: 15px;
     flex-grow: 1;
 }
 
@@ -47,8 +58,8 @@ header {
 
 .today-item img {
     width: 100%;
-    height: 290px;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 section {
@@ -79,8 +90,8 @@ section {
 
 .special-img {
     width: 49%;
-    height: 385px;
     object-fit: cover;
+    aspect-ratio: 1.63;
 }
 
 .container {
@@ -97,6 +108,7 @@ section {
 .item-date {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .item-date span {
@@ -114,5 +126,25 @@ section {
 @media (max-width: 1080px) {
     .today-list {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .special-list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .special-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar {
+        padding: 10px 3rem;
+    }
+    .navbar-brand {
+        flex-grow: inherit;
+    }
+    .today-list{
+        grid-template-columns: 1fr;
     }
 }
