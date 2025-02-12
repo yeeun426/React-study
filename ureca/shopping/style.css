@@ -2,12 +2,8 @@ body {
     margin: 0;
 }
 
-header {
-    display: flex;
-    gap: 50px;
-    place-self: anchor-center;
-    align-items: anchor-center;
-    padding: 20px;
+.navbar {
+    padding: 30px 0;
 }
 
 .logo {
