@@ -2,13 +2,13 @@ import React from 'react'
 import List from './List'
 
 const PostList = ({ data, setData }) => {
-  console.log(data)
+  console.log('PostList', data)
 
   return (
     <div className="mw">
       <div className="totalcount">
         <strong>TotalCount</strong>
-        <span>0</span>
+        <span>{data.length}</span>
       </div>
       <ul className="postlist">
         {data.map((area, i) => (

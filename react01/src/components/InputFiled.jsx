@@ -24,9 +24,6 @@ const InputFiled = ({ setData }) => {
       return
     }
 
-    // 로컬 스토리지 저장하기
-    //localStorage.setItem('trip', JSON.stringify())
-
     setData(prev => {
       const newData = [...prev, inputText]
       localStorage.setItem('trip', JSON.stringify(newData))
