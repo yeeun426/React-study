@@ -1,9 +1,8 @@
 import React from 'react'
 import List from './List'
 
-const PostList = ({ data }) => {
+const PostList = ({ data, setData }) => {
   console.log(data)
-  // 자식 컴포넌트에게 state값을 전송할 때 props 전송한다.
 
   return (
     <div className="mw">
@@ -13,7 +12,7 @@ const PostList = ({ data }) => {
       </div>
       <ul className="postlist">
         {data.map((area, i) => (
-          <List key={i} area={area} />
+          <List key={i} area={area} setData={setData} />
         ))}
       </ul>
     </div>

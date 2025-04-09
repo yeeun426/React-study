@@ -1,0 +1,48 @@
+.imgCon {
+  border: 1px solid red;
+  width: 200px;
+  height: 200px;
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.imgCon > * {
+  position: absolute;
+  border: 1px solid white;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.imgCon img {
+  opacity: 0.5;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imgCon p:nth-of-type(1) {
+  top: -100%;
+  font-size: 1.5rem;
+}
+.imgCon p:nth-of-type(2) {
+  bottom: -30%;
+  color: white;
+  background-color: black;
+  padding: 0.25rem;
+}
+.imgCon:hover img {
+  transform: scale(1.2);
+}
+.imgCon p {
+  z-index: 10;
+}
+.imgCon:hover p:nth-of-type(1) {
+  top: 2rem;
+}
+.imgCon:hover p:nth-of-type(2) {
+  bottom: 2rem;
+  /* 거리를 다르게하면 속도 스타일이 달라진다. */
+}
