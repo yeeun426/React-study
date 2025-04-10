@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hd {
+  text-align: center;
+  padding: var(--gap3) 0 calc(var(--gap3));
+  font-size: 2rem;
+  font-weight: bold;
+}

@@ -1,0 +1,24 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px;
+}
+
+.button button {
+  display: flex;
+  height: 50px;
+  width: 100px;
+  border-radius: 1rem;
+  border: 1px solid #cdcdcd;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button p {
+  align-content: center;
+}
+
+.button img {
+  height: 100%;
+}

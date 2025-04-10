@@ -1,0 +1,36 @@
+@charset 'utf-8';
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Myeongjo&display=swap");
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "S-CoreDream-3Light";
+  --blue-dark: #1e6f9f;
+  --blue: #4ea8de;
+  --purple-dark: #5e60ce;
+  --purple: #8284fa;
+  --gray-700: #0d0d0d;
+  --gray-600: #1a1a1a;
+  --gray-500: #262626;
+  --gray-400: #333333;
+  --gray-300: #808080;
+  --gray-200: #d9d9d9;
+  --gray-100: #f2f2f2;
+  --danger: #e25858;
+  --gap1: 8px;
+  --gap2: 16px;
+  --gap3: 32px;
+  line-height: 1.4;
+}
+
+p {
+  justify-self: center;
+  text-align: center;
+  line-height: 1.4;
+}
