@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-// import Card from "./components/Card";
 import Button from "./components/Button";
-import app from "./css/App.module.css";
 import Card from "./components/Card";
+import app from "./css/App.module.css";
 
 const App = () => {
   const choice = [
@@ -16,10 +15,10 @@ const App = () => {
 
   const handleUserChoice = (userSelector) => {
     const computerSelect = generateComputerChoice();
+    const gameResult = determineWinner(userSelector, computerSelect);
+    setResult(gameResult);
     setComputerChoice(computerSelect);
     setUserChoice(userSelector);
-    const gameResult = determineWinner(userChoice, computerChoice);
-    setResult(gameResult);
   };
 
   const play = (userSelector, computerSelect) => {
