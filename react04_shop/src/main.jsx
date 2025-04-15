@@ -13,6 +13,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // 기존 CSS 파일
 import './index.css'
 
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
