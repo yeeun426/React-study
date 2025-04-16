@@ -1,0 +1,36 @@
+.listCon {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--fs33);
+}
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: var(--fs12);
+}
+.more {
+  font-size: var(--fs12);
+}
+.more:hover {
+  color: var(--dark-colors-accent-dark);
+  font-weight: bold;
+}
+.more::after {
+  content: '\f138';
+  font-family: 'bootstrap-icons';
+  position: relative;
+  transform: translateX(0);
+  display: inline-block;
+  transition: transform 0.3;
+}
+.more:hover::after {
+  transform: translateX(5px);
+}
+@media (max-width: 600px) {
+  .list {
+    grid-template-columns: repeat(1fr);
+  }
+}

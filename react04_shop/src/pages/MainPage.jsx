@@ -1,11 +1,14 @@
-import React from 'react'
-import HeroSlider from '../organism/HeroSlider'
+import React, { lazy } from 'react'
+
+import LatestList from '../organism/LatestList'
+const HeroSlider = lazy(() => import('../organism/HeroSlider'))
 
 const MainPage = () => {
   return (
     <main>
-      <h2>MainPage</h2>
+      <h2 hidden>MainPage</h2>
       <HeroSlider />
+      <LatestList />
     </main>
   )
 }
