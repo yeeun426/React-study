@@ -19,6 +19,6 @@ import 'swiper/css/pagination'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <RouterProvider router={router} fallbackElement={<div>로딩중...</div>} />
   </StrictMode>
 )

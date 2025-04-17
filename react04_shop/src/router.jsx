@@ -9,6 +9,9 @@ const ShopPage = lazy(() => import('./pages/ShopPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const CartPage = lazy(() => import('./pages/CartPage'))
 
+import DetailPage from './pages/DetailPage'
+import { detailPageLoader } from './loaders/productsLoaders'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -20,12 +23,12 @@ const router = createBrowserRouter([
       { path: '/about', element: <AboutPage /> },
       { path: '/blog', element: <BlogPage /> },
       { path: '/cart', element: <CartPage /> },
-      { path: '/detail/:productId', element: <CartPage /> },
+      {
+        path: '/detail/:productId',
+        element: <DetailPage />,
+        loader: detailPageLoader,
+      },
     ],
-  },
-  {
-    path: '*',
-    element: <NotFound />,
   },
 ])
 export default router

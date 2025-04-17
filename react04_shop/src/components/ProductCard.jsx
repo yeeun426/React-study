@@ -8,11 +8,11 @@ const ProductCard = ({ product }) => {
       <div className={css.imgWrap}>
         <img src={`/public/img/${product.img}`} alt={product.title} />
         <span className={css.cate}>{product.category}</span>
-        <span className={css.discount}>{product.discount}%</span>
+        {product.discount > 0 && <span className={css.discount}>{product.discount}%</span>}
       </div>
       <div className={css.textWrap}>
         <strong className={css.title}>{product.title}</strong>
-        <span className={css.price}>{product.price.toLocaleString()}</span>
+        <span className={css.price}>{product.price.toLocaleString()}원</span>
       </div>
       <Link to={`./detail/${product.id}`} className={css.btnGnDetail}>
         상품 상세 페이지
