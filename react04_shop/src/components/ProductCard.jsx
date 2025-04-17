@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
         <strong className={css.title}>{product.title}</strong>
         <span className={css.price}>{product.price.toLocaleString()}원</span>
       </div>
-      <Link to={`./detail/${product.id}`} className={css.btnGnDetail}>
+      <Link to={`/detail/${product.id}`} className={css.btnGnDetail}>
         상품 상세 페이지
       </Link>
     </div>
