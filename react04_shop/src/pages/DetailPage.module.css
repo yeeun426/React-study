@@ -71,16 +71,17 @@ main > * {
   border-radius: var(--fs8);
   border: 1px solid var(--dark-colors-accent-dark);
 }
-
-.tabCon {
-  padding: var(--fs64) 0;
-}
-.tabCon > ul > li > button {
-  color: black;
-}
-
 .similarCon h3 {
   font-weight: bold;
-  font-size: 20px;
-  margin-bottom: 22px;
+  font-size: var(--fs20);
+  margin-bottom: var(--fs26);
+}
+
+@media (max-width: 600px) {
+  .detailCon {
+    flex-direction: column;
+  }
+  .imgWrap {
+    width: 100%;
+  }
 }
