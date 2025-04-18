@@ -2,15 +2,15 @@ import React, { lazy, Suspense } from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Default from './layout/Default'
 import NotFound from './pages/NotFound'
+import { detailPageLoader } from './loaders/productsLoaders'
+import { cartPageLoader } from './loaders/cartLoaders'
 
 const MainPage = lazy(() => import('./pages/MainPage'))
 const AboutPage = lazy(() => import('./pages/AboutPage'))
 const ShopPage = lazy(() => import('./pages/ShopPage'))
 const BlogPage = lazy(() => import('./pages/BlogPage'))
 const CartPage = lazy(() => import('./pages/CartPage'))
-
-import DetailPage from './pages/DetailPage'
-import { detailPageLoader } from './loaders/productsLoaders'
+const DetailPage = lazy(() => import('./pages/DetailPage'))
 
 const router = createBrowserRouter([
   {
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       { path: '/shop', element: <ShopPage /> },
       { path: '/about', element: <AboutPage /> },
       { path: '/blog', element: <BlogPage /> },
-      { path: '/cart', element: <CartPage /> },
+      { path: '/cart', element: <CartPage />, loader: cartPageLoader },
       {
         path: '/detail/:productId',
         element: <DetailPage />,
