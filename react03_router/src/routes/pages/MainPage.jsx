@@ -4,10 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import css from "./Main.module.css";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
 const MainPage = () => {
   return (
     <div>

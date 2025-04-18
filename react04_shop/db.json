@@ -175,5 +175,25 @@
       "description": "333배너 리스트 영역의 배너 상세 내용이 들어갑니다.",
       "link": "/shop"
     }
+  ],
+  "cart": [
+    {
+      "id": 17,
+      "title": "test7",
+      "img": "image7.jpg",
+      "price": 19000,
+      "category": "top",
+      "discount": 7,
+      "count": 2
+    },
+    {
+      "id": 4,
+      "title": "14k/18k 데일리 더블링 목걸이",
+      "img": "image4.jpg",
+      "price": 318000,
+      "category": "new",
+      "discount": 42,
+      "count": 3
+    }
   ]
 }
