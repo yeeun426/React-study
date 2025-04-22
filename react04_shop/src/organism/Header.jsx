@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import css from './Header.module.css'
 import Logo from '../components/Logo'
-import { throttle } from '../utils/feature'
+import { throttle } from '../utils/features'
 
 const Header = () => {
   const [isOn, setIsOn] = useState(false)

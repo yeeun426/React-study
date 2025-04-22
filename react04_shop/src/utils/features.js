@@ -1,6 +1,15 @@
+export const formmatCurrency = number => {
+  return number.toLocaleString() + '원'
+}
+
 export const formatDate = date => {
-  const options = { year: 'numeric', month: '2-digit', day: '2-digit' }
-  return new Date(date).toLocaleDateString('ko-KR', options)
+  const d = new Date(date)
+  const year = d.getFullYear()
+  // getMonth()는 0부터 시작하므로 1을 더하고, 10보다 작으면 앞에 0 추가
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+
+  return `${year}. ${month}. ${day}`
 }
 
 // 디바운스 : 연속된 호출을 지연시켜 한번만 실행. 함수(함수, 대시시간)
