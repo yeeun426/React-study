@@ -1032,7 +1032,7 @@
       "price": 185000,
       "category": "new",
       "discount": 5,
-      "count": 3
+      "count": 1
     },
     {
       "id": "8",
@@ -1041,25 +1041,33 @@
       "price": 54000,
       "category": "new",
       "discount": 10,
-      "count": 3
+      "count": 1
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "todosDesc": "할일 내용이 입력",
+      "createAt": "2025.04.24",
+      "isDone": false
     },
     {
-      "id": "4",
-      "title": "14k/18k 데일리 더블링 목걸이",
-      "img": "image4.jpg",
-      "price": 318000,
-      "category": "new",
-      "discount": 42,
-      "count": 1
+      "id": 2,
+      "todosDesc": "할일 내용이 입력2",
+      "createAt": "2025.04.25",
+      "isDone": true
     },
     {
-      "id": "5",
-      "title": "14K/18K 네쥬 T라인 원터치 링 귀찌 귀걸이",
-      "img": "image5.jpg",
-      "price": 58000,
-      "category": "new",
-      "discount": 0,
-      "count": 1
+      "id": 3,
+      "todosDesc": "내 생일 !",
+      "createAt": "2025.04.26",
+      "isDone": true
+    },
+    {
+      "id": 4,
+      "todosDesc": "이지롱",
+      "createAt": "2025.04.26",
+      "isDone": true
     }
   ]
 }
