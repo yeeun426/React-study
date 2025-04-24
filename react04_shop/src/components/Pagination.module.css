@@ -1,4 +1,8 @@
 .paginationArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--fs8);
   margin: var(--fs33) 0;
 }
 .paginationArea button {
@@ -9,8 +13,8 @@
   padding: var(--fs8);
   transition: 0.3s;
 }
-
-.paginationArea button:hover,
+/* .paginationArea button:not(:nth-last-child)  */
+.paginationArea button:hover:not(:disabled),
 .paginationArea button.active {
   background-color: var(--dark-colors-accent-dark);
   color: var(--dark-colors-white-dark);

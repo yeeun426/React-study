@@ -18,8 +18,8 @@ const CartPage = () => {
 
   const increase = id => {
     // 아이템이 없으면 일찍 함수 종료
-    const cuurentItem = items.find(item => item.id === id)
-    if (!cuurentItem) return
+    const currentItem = items.find(item => item.id === id)
+    if (!currentItem) return
 
     setItems(prev => prev.map(item => (item.id === id ? { ...item, count: item.count + 1 } : item)))
     const newCount = items.find(item => item.id === id).count + 1
@@ -28,8 +28,8 @@ const CartPage = () => {
   }
 
   const decrease = id => {
-    const cuurentItem = items.find(item => item.id === id)
-    if (!cuurentItem) return
+    const currentItem = items.find(item => item.id === id)
+    if (!currentItem) return
 
     setItems(prev =>
       prev.map(item =>
@@ -42,7 +42,7 @@ const CartPage = () => {
     }
   }
 
-  const hadleDelete = id => {
+  const handleDelete = id => {
     if (window.confirm('정말 삭제하시겠습니까?')) {
       setItems(prev => prev.filter(item => item.id !== id))
       removeFromCart(id).catch(err => console.log('err', err))
@@ -92,7 +92,7 @@ const CartPage = () => {
                 <div
                   className={css.deleteBtn}
                   onClick={() => {
-                    hadleDelete(item.id)
+                    handleDelete(item.id)
                   }}
                 >
                   <i className="bi bi-trash3"></i>

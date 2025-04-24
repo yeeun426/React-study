@@ -20,19 +20,15 @@ const Pagination = ({ initProductsData }) => {
     // 한번에 보여줄 최대 페이지 번호 수
     const maxPageNumbers = 10
     // 전체 페이지가가 최대 페이지보다 작으면 모든 페이지 번호 표시
-    if (pages < maxPageNumbers) {
+    if (pages <= maxPageNumbers) {
       return Array.from({ length: maxPageNumbers }, (_, i) => i + 1)
     }
     // 페이지가 많을 경우 현재 페이지 번호를 기준으로 주변 번호 생성
     // 예) 현재 페이지 15 => 10 ~ 25까지 보여줌
     let startPage = Math.max(1, currentPage - Math.floor(maxPageNumbers / 2))
     let endPage = Math.min(pages, startPage + maxPageNumbers - 1)
+    startPage = Math.max(1, endPage - maxPageNumbers + 1)
 
-    // endPage가 pages보다 작을 경우 startPage 조정
-    if (endPage > pages) {
-      endPage = pages
-      startPage = Math.max(1, endPage - maxPageNumbers + 1)
-    }
     return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i)
   }
 
