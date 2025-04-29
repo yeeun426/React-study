@@ -1,4 +1,4 @@
-// https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=8b7f7d685453d057df756a3e33636d45
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
@@ -43,4 +43,21 @@ export const getCountryData = async (city) => {
   } catch (error) {
     console.lor(error);
   }
+};
+
+export const useWeather = (city) => {
+  console.log("날씨 데이터:", city);
+  return useQuery({
+    queryKey: ["weather", city],
+    queryFn: async () => {
+      try {
+        const data = city ? await getCountryData(city) : await getCurrentData();
+        return data;
+      } catch (err) {
+        console.log("", err);
+      }
+    },
+    staleTime: 1000 * 3,
+    retry: 1,
+  });
 };

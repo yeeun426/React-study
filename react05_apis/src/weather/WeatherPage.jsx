@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import css from "./WeatherPage.module.css";
-import { getCurrentData } from "./useWeatherApi";
+import { getCurrentData, useWeather } from "./useWeatherApi";
 import { useSearchParams } from "react-router-dom";
 import Button from "../weather/Button";
 import { getCountryData } from "./useWeatherApi";
@@ -8,7 +8,6 @@ import { getCountryData } from "./useWeatherApi";
 const WeatherPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const city = searchParams.get("city");
-  const [weatherData, setWeatherData] = useState(null);
 
   const cityButtons = [
     { id: "current", label: "현재위치" },
@@ -17,22 +16,7 @@ const WeatherPage = () => {
     { id: "new york", label: "뉴욕" },
     { id: "paris", label: "파리" },
   ];
-  useEffect(() => {
-    const fetchWeatherData = async () => {
-      try {
-        let data;
-        if (city) {
-          data = await getCountryData(city);
-        } else {
-          data = await getCurrentData();
-        }
-        setWeatherData(data);
-      } catch (err) {
-        console.err(err);
-      }
-    };
-    fetchWeatherData();
-  }, [city]);
+  const { data: weatherData, isLoading, isError } = useWeather(city);
 
   const handleChangeCity = (city) => {
     if (city === "current") {
@@ -41,6 +25,9 @@ const WeatherPage = () => {
       setSearchParams({ city });
     }
   };
+
+  isLoading && <p>Loading</p>;
+  isError && <p>에러 발생</p>;
 
   return (
     <main className={css.main}>
